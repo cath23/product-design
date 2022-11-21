@@ -4,7 +4,6 @@
 
 .quote-container,
 .list-container {
-    // display: block;
     justify-content: center;
     flex-flow: column;
     height: 100%;
@@ -47,11 +46,20 @@
     .list-content {
         ::slotted(li) {
             list-style-position: inside;
-            text-indent: -$d-fs-m; // alligns list item text vertically, despite the "list item dot"
+            text-indent: -28px; // alligns list item text vertically, despite the "list item dot"
             padding-left: 1rem !important;
 
+            @-moz-document url-prefix() {
+                // on firefox text-indext is different compared to chrome.
+                text-indent: -$d-fs-m;
+            }
+
             @include media("<=phone") {
-                text-indent: -$m-fs-s; // alligns list item text vertically, despite the "list item dot"
+                text-indent: -23px; // alligns list item text vertically, despite the "list item dot"
+                @-moz-document url-prefix() {
+                    // on firefox text-indext is different compared to chrome.
+                    text-indent: -$m-fs-m;
+                }
             }
         }
 
