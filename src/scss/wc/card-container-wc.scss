@@ -8,7 +8,6 @@
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color: $light-60;
 
     @include media("<=phone") {
         // switch to flex on mobile, since it's just one column and evenly sized rows
