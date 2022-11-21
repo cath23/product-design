@@ -1,0 +1,23 @@
+// @use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+:host {
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: $light-60;
+
+    @include media("<=phone") {
+        // switch to flex on mobile, since it's just one column and evenly sized rows
+        display: flex;
+        flex-flow: column;
+    }
+
+    ::slotted(:nth-child(3)) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}

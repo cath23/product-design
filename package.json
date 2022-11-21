@@ -1,0 +1,31 @@
+{
+  "name": "product-design",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.8.0",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "@parcel/validator-eslint": "^2.8.0",
+    "eslint": "^8.28.0"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html --no-source-maps",
+    "serve": "parcel src/index.html --no-source-maps",
+    "build": "parcel build src/index.html --no-source-maps --no-optimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cath23/product-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cath23/product-design/issues"
+  },
+  "homepage": "https://github.com/cath23/product-design#readme"
+}
