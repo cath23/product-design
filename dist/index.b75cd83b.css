@@ -73,7 +73,7 @@ h3.bold {
   h3 {
     letter-spacing: -.04em;
     font-size: 18px;
-    line-height: 115%;
+    line-height: 120%;
   }
 
   h3.bold {
@@ -84,6 +84,7 @@ h3.bold {
 
 h4 {
   color: #04041066;
+  text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
   line-height: 140%;
@@ -133,6 +134,7 @@ p.bold, .bf-text-regular.bold {
 }
 
 .link-text {
+  letter-spacing: -.04em;
   color: #040410;
   font-size: 14px;
   font-weight: 600;
@@ -140,6 +142,7 @@ p.bold, .bf-text-regular.bold {
 }
 
 .tag-text {
+  letter-spacing: -.04em;
   color: #04041066;
   font-size: 14px;
   font-weight: 500;
@@ -154,6 +157,7 @@ p.bold, .bf-text-regular.bold {
 }
 
 .quote-caption-text {
+  letter-spacing: -.04em;
   color: #04041066;
   font-size: 16px;
   font-weight: 600;

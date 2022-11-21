@@ -1,5 +1,6 @@
 @use "/src/scss/abstracts/global.scss" as *;
 @use "/src/scss/abstracts/tokens.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
 
 .quote-container,
 .list-container {
@@ -46,8 +47,12 @@
     .list-content {
         ::slotted(li) {
             list-style-position: inside;
-            text-indent: -1rem;
+            text-indent: -$d-fs-m; // alligns list item text vertically, despite the "list item dot"
             padding-left: 1rem !important;
+
+            @include media("<=phone") {
+                text-indent: -$m-fs-s; // alligns list item text vertically, despite the "list item dot"
+            }
         }
 
         ::slotted(:not(:last-child)) {
@@ -59,6 +64,5 @@
 .quote-container {
     .quote-caption {
         margin-top: 0.5rem;
-        color: $dark-40;
     }
 }

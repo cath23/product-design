@@ -71,7 +71,7 @@ h3 {
     @include media("<=phone") {
         font-size: $m-fs-m;
         letter-spacing: $ls-s;
-        line-height: $lh-s;
+        line-height: $lh-m;
 
         &.bold {
             font-weight: $fw-bold;
@@ -85,6 +85,7 @@ h4 {
     font-weight: $fw-heavy;
     line-height: 140%;
     color: $dark-40;
+    text-transform: uppercase;
 
     @include media("<=phone") {
         font-size: $m-fs-xs;
@@ -127,6 +128,7 @@ p, .bf-text-regular {
 .link-text {
     font-size: $d-fs-xs;
     font-weight: $fw-semiBold;
+    letter-spacing: $ls-s;
     line-height: $lh-xs;
     color: $dark-100;
 }
@@ -135,6 +137,7 @@ p, .bf-text-regular {
     font-size: $d-fs-xs;
     font-weight: $fw-medium;
     line-height: $lh-xl;
+    letter-spacing: $ls-s;
     color: $dark-40;
 }
 
@@ -149,6 +152,7 @@ p, .bf-text-regular {
     font-size: $d-fs-s;
     font-weight: $fw-semiBold;
     line-height: $lh-2xl;
+    letter-spacing: $ls-s;
     color: $dark-40;
 }
 
