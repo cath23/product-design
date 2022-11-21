@@ -1,0 +1,181 @@
+@use "./tokens.scss" as *;
+@use "./breakpoints.scss" as *;
+
+// ..:: CSS Reset ::.. // todo consider changing this to Josh Cameau's CSS minimal reset
+*,
+*:before,
+*:after {
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-white; // todo chek background color in Figma
+    height: 100%;
+
+    @include media("<=tablet") {
+        padding-inline: 1.5rem;
+    }
+}
+
+main {
+    height: inherit;
+}
+
+h1 {
+    font-size: $d-fs-2xl;
+    font-weight: $fw-semiBold;
+    line-height: $lh-m;
+    letter-spacing: $ls-xs;
+    color: $dark-80;
+
+    @include media("<=phone") {
+        font-size: $m-fs-xl;
+        line-height: $lh-s;
+        letter-spacing: $ls-s;
+    }
+}
+
+h2 {
+    font-size: $d-fs-xl; // todo check how am I going to use h1 and h2 styles. It's confusing.
+    font-weight: $fw-semiBold;
+    line-height: $lh-m;
+    letter-spacing: $ls-xs;
+    color: $dark-80;
+
+    @include media("<=phone") {
+        font-size: $m-fs-l;
+        letter-spacing: $ls-s;
+    }
+}
+
+h3 {
+    font-size: $d-fs-l;
+    font-weight: $fw-medium;
+    letter-spacing: $ls-xs;
+    line-height: $lh-s;
+    color: $dark-80;
+
+    &.bold {
+        font-weight: $fw-bold;
+        letter-spacing: $ls-s;
+    }
+
+    @include media("<=phone") {
+        font-size: $m-fs-m;
+        letter-spacing: $ls-s;
+        line-height: $lh-s;
+
+        &.bold {
+            font-weight: $fw-bold;
+            letter-spacing: $ls-m;
+        }
+    }
+}
+
+h4 {
+    font-size: $d-fs-xs;
+    font-weight: $fw-heavy;
+    line-height: 140%;
+    color: $dark-40;
+
+    @include media("<=phone") {
+        font-size: $m-fs-xs;
+    }
+}
+
+p, .bf-text-regular {
+    font-size: $d-fs-l;
+    font-weight: $fw-regular;
+    line-height: $lh-2xl;
+    letter-spacing: $ls-s;
+    color: $dark-80;
+
+    &.bold {
+        font-weight: $fw-bold;
+        color: $dark-100;
+    }
+
+    @include media("<=phone") {
+        font-size: $m-fs-m;
+        font-weight: $fw-regular;
+        letter-spacing: $ls-m;
+    }
+}
+
+.bd-text-small {
+    font-size: $d-fs-m;
+    font-weight: $fw-regular;
+    line-height: $lh-2xl;
+    letter-spacing: $ls-s;
+    color: $dark-80;
+
+    @include media("<=phone") {
+        font-size: $m-fs-s;
+        line-height: $lh-l;
+        letter-spacing: $ls-m;
+    }
+}
+
+.link-text {
+    font-size: $d-fs-xs;
+    font-weight: $fw-semiBold;
+    line-height: $lh-xs;
+    color: $dark-100;
+}
+
+.tag-text {
+    font-size: $d-fs-xs;
+    font-weight: $fw-medium;
+    line-height: $lh-xl;
+    color: $dark-40;
+}
+
+.caption-text {
+    font-size: $d-fs-s;
+    line-height: $lh-2xl;
+    letter-spacing: $ls-s;
+    color: $dark-80;
+}
+
+.quote-caption-text {
+    font-size: $d-fs-s;
+    font-weight: $fw-semiBold;
+    line-height: $lh-2xl;
+    color: $dark-40;
+}
+
+.container-lg {
+    max-width: 1440px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dark {
+    color: $dark-80;
+}
+
+.grey {
+    color: $dark-40;
+}
+
+.bold {
+    font-weight: $fw-bold;
+}
+
+.italic {
+    font-style: italic;
+}

@@ -1,0 +1,64 @@
+@use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+.quote-container,
+.list-container {
+    // display: block;
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
+    padding: 2.5rem !important;
+    border-radius: 1rem;
+    background-color: $light-60;
+    box-shadow: $shadow-60;
+}
+
+:host([type="list"]) {
+    // it's a list card, show no quote content
+    .quote-container,
+    .quote-container * {
+        display: none;
+    }
+}
+
+:host([type="quote"]) {
+    // it's a quote card, show no list content
+    .list-container,
+    .list-container * {
+        display: none;
+    }
+}
+
+.list-container {
+    // Align emoji with text
+    // https://stackoverflow.com/a/74521221/7889584
+    .list-title {
+        margin-bottom: 1.5rem;
+        vertical-align: baseline;
+        display: inline-flex;
+
+        .emoji {
+            align-self: center;
+            margin-top: -9px;
+        }
+    }
+
+    .list-content {
+        ::slotted(li) {
+            list-style-position: inside;
+            text-indent: -1rem;
+            padding-left: 1rem !important;
+        }
+
+        ::slotted(:not(:last-child)) {
+            margin-bottom: 0.5rem !important;
+        }
+    }
+}
+
+.quote-container {
+    .quote-caption {
+        margin-top: 0.5rem;
+        color: $dark-40;
+    }
+}
