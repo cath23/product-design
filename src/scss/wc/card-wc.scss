@@ -7,10 +7,14 @@
     justify-content: center;
     flex-flow: column;
     height: 100%;
-    padding: 2.5rem !important;
+    padding: 2.5rem;
     border-radius: 1rem;
     background-color: $light-60;
     box-shadow: $shadow-60;
+
+    @include media("<=phone") {
+        padding: 1.5rem;
+    }
 }
 
 :host([type="list"]) {
@@ -46,12 +50,21 @@
     .list-content {
         ::slotted(li) {
             list-style-position: inside;
-            text-indent: -1rem; // alligns list item text vertically, despite the "list item dot"
-            padding-left: 1rem !important;
+            text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
+            padding-left: 2rem !important;
+
+            @-moz-document url-prefix() {
+                // on firefox text-indext is different compared to chrome.
+                padding-left: 1.5rem !important;
+                text-indent: -1.4rem;
+            }
 
             @include media("<=phone") {
+                text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
+                padding-left: 1.6rem !important;
                 @-moz-document url-prefix() {
                     // on firefox text-indext is different compared to chrome.
+                    padding-left: 1.2rem !important;
                     text-indent: -$m-fs-m;
                 }
             }
