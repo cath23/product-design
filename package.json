@@ -13,9 +13,9 @@
     "eslint": "^8.28.0"
   },
   "scripts": {
-    "dev": "parcel src/index.html --no-source-maps",
+    "dev": "parcel src/*.html --no-source-maps",
     "serve": "parcel src/index.html --no-source-maps",
-    "build": "parcel build src/index.html --no-source-maps --no-optimize"
+    "build": "parcel build src/*.html --no-source-maps --no-optimize"
   },
   "repository": {
     "type": "git",

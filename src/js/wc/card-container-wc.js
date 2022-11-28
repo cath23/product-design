@@ -3,7 +3,7 @@ import cardContainerStyles from 'bundle-text:../../scss/wc/card-container-wc.scs
 
 const cardContainerTemplate = document.createElement('template');
 
-// The /*html*/ comment is for an extention to be able to highlight html inside backticks.
+// The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 cardContainerTemplate.innerHTML = /*html*/`
 	<slot name="card1"></slot>
 	<slot name="card2"></slot>

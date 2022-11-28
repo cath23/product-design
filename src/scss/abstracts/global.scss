@@ -16,13 +16,13 @@
     box-sizing: border-box;
 }
 
+header li {
+    list-style-type: none;
+}
+
 body {
     background-color: $bg-white; // todo chek background color in Figma
     height: 100%;
-
-    @include media("<=tablet") {
-        padding-inline: 1.5rem;
-    }
 }
 
 main {
@@ -131,6 +131,11 @@ p, .bf-text-regular {
     letter-spacing: $ls-s;
     line-height: $lh-xs;
     color: $dark-100;
+    text-decoration: none;
+
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .tag-text {
@@ -158,14 +163,17 @@ p, .bf-text-regular {
 
 .container-lg {
     max-width: 1440px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .container-sm {
     max-width: 800px;
     margin: 0 auto;
+
+    @include media("<=tablet") {
+        padding-inline: 1.5rem;
+    }
 }
 
 .dark {

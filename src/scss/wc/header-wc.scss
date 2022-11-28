@@ -1,0 +1,134 @@
+@use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+
+:host {
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	height: 80px;
+
+	@include media("<=tablet") {
+		height: 64px;
+	}
+	.header-container {
+		position: sticky;
+		top: 0;
+		bottom: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: inherit;
+		padding: 2.5rem 5rem 0 5rem;
+
+		@include media("<=tablet") {
+			padding: 1.5rem 1.5rem 0 1.5rem;
+		}
+
+		.header-home_logo {
+			display: none;
+		}
+
+		.header-home_back-link {
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				.header-home_back-emoji {
+					animation: 400ms hand 4 alternate both ease-in-out;
+				}
+			}
+			.header-home_back-emoji {
+				height: 20px;
+				margin-right: 0.5rem;
+				// transition: all 200ms ease-in-out;
+
+				@keyframes hand {
+					from {
+						transform: translateX(0%);
+					}
+
+					to {
+						transform: translateX(-30%);
+					}
+				}
+			}
+		}
+
+		.header-navigation_list {
+			display: none;
+		}
+	}
+}
+
+:host([type="main"]) {
+	.header-home_logo {
+		display: block;
+		.header-home_logo-svg {
+			display: block;
+			height: inherit;
+			path {
+				fill: $dark-100;
+			}
+		}
+	}
+	.header-home_back-link {
+		display: none;
+	}
+
+	.header-navigation_list {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		gap: 2.5rem;
+		list-style-type: none;
+		.header-navigation_list-item {
+			display: grid;
+			place-content: center;
+			height: 100%;
+			position: relative;
+
+			.header-navigation_link {
+				color: $dark-40;
+				transition: color 200ms ease-out;
+			}
+
+			&.active {
+				.header-navigation_link {
+					color: $dark-100;
+				}
+			}
+
+			&.active{
+				position: relative;
+				.header-navigation_link::after {
+					content: '';
+					position: absolute;
+					top: auto;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 2px;
+					background-color: $dark-100;
+					border-radius: 25px;
+				}
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:hover:not(.active) {
+				.header-navigation_link {
+					color: $dark-60;
+
+				}
+			}
+			.header-navigation_link {
+
+			}
+		}
+	}
+}
