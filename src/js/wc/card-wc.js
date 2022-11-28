@@ -1,7 +1,13 @@
 import cardStyles from 'bundle-text:../../scss/wc/card-wc.scss';
 
 const cardTemplate = document.createElement('template');
-// The /*html*/ comment is for an extention to be able to highlight html inside backticks.
+/**
+ * The cardTemplate contains two card variants: 'quote' and 'list' card
+ * To choose the variant you want to use just add a 'type' attribute when consuming the component
+ * and pass the variant of your preference. Eg <card-wc type:"quote"><card-wc/>.
+ * The corresponding variant is handled directly via the component's CSS.
+ */
+// The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 cardTemplate.innerHTML = /*html*/`
     <div class="quote-container">
         <p class="quote-text bd-text-small italic"><slot name="quote-text">"This is a quoted text"</slot></p>
