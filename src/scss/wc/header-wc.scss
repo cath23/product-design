@@ -13,6 +13,7 @@
 	@include media("<=tablet") {
 		height: 64px;
 	}
+
 	.header-container {
 		position: sticky;
 		top: 0;
@@ -35,30 +36,32 @@
 			display: flex;
 			align-items: center;
 
-			&:hover {
-				.header-home_back-emoji {
-					animation: 400ms hand 4 alternate both ease-in-out;
-				}
-			}
 			.header-home_back-emoji {
 				height: 20px;
 				margin-right: 0.5rem;
-				// transition: all 200ms ease-in-out;
-
-				@keyframes hand {
-					from {
-						transform: translateX(0%);
-					}
-
-					to {
-						transform: translateX(-30%);
-					}
-				}
 			}
 		}
 
 		.header-navigation_list {
 			display: none;
+		}
+	}
+}
+
+.goBack-anm {
+	&:hover {
+		.header-home_back-emoji {
+			animation: 400ms goBack-animation 4 alternate both ease-in-out;
+		}
+	}
+
+	@keyframes goBack-animation {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-30%);
 		}
 	}
 }

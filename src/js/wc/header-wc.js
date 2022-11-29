@@ -27,7 +27,7 @@ headerTemplate.innerHTML = /*html*/`
 					<path class="letter letter2"  fill="url(#grad2)" d="M29.316 26H32.466L27.372 19.628L32.142 13.994H28.992L24.744 19.358V13.994H22.188V26H24.744V22.31L25.68 21.194L29.316 26Z" fill="#161616"/>
 				</svg>
 			</a>
-			<a href="/index.html" class="header-home_back-link link-text"><img class="header-home_back-emoji" src="${goBackImg}"><span>Go back</span></a>
+			<a href="/index.html" class="header-home_back-link link-text goBack-anm"><img class="header-home_back-emoji" src="${goBackImg}"><span>Go back</span></a>
 		</div>
 		<ul class="header-navigation_list">
 			<li class="header-navigation_list-item active"><a href="/index.html" class="header-navigation_link link-text">Work</a></li>
