@@ -10,7 +10,7 @@
 	align-items: center;
 	height: 80px;
 
-	@include media("<=tablet") {
+	@include media("<=phone") {
 		height: 64px;
 	}
 
@@ -24,7 +24,7 @@
 		height: inherit;
 		padding: 2.5rem 5rem 0 5rem;
 
-		@include media("<=tablet") {
+		@include media("<=phone") {
 			padding: 1.5rem 1.5rem 0 1.5rem;
 		}
 
@@ -44,24 +44,6 @@
 
 		.header-navigation_list {
 			display: none;
-		}
-	}
-}
-
-.goBack-anm {
-	&:hover {
-		.header-home_back-emoji {
-			animation: 400ms goBack-animation 4 alternate both ease-in-out;
-		}
-	}
-
-	@keyframes goBack-animation {
-		from {
-			transform: translateX(0%);
-		}
-
-		to {
-			transform: translateX(-30%);
 		}
 	}
 }
@@ -87,6 +69,10 @@
 		height: 40px;
 		gap: 2.5rem;
 		list-style-type: none;
+
+		@include media("<=phone") {
+			gap: 1.5rem;
+		}
 		.header-navigation_list-item {
 			display: grid;
 			place-content: center;
@@ -132,6 +118,26 @@
 			.header-navigation_link {
 
 			}
+		}
+	}
+}
+
+
+/* Animation */
+.goBack-anm {
+	&:hover {
+		.header-home_back-emoji {
+			animation: 400ms goBack-animation 4 alternate both ease-in-out;
+		}
+	}
+
+	@keyframes goBack-animation {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-30%);
 		}
 	}
 }

@@ -23,6 +23,7 @@ header li {
 body {
     background-color: $bg-white; // todo chek background color in Figma
     height: 100%;
+    overflow-x: hidden;
 }
 
 main {
@@ -170,8 +171,19 @@ p, .bf-text-regular {
 .container-sm {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.center-hrz {
+    width: 100%;
+    // display: flex;
+    // flex-flow: column;
+    // align-items: center;
 
     @include media("<=tablet") {
+        padding-inline: 5rem;
+    }
+
+    @include media("<=phone") {
         padding-inline: 1.5rem;
     }
 }
