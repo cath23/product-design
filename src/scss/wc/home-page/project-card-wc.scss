@@ -1,0 +1,91 @@
+@use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+:host {
+	display: block;
+}
+
+.pj-card {
+	// ::after pseudo-element does not work on img itself
+	// we need a wrapper and the ::after on it
+	.pj-card__img-container {
+		position: relative;
+		margin-bottom: $space-xs;
+		// width: 200px;
+		// height: 200px;
+
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: $border-radius;
+			background-color: $light-20;
+			opacity: 0;
+			transition:all .3s ease;
+		}
+
+		::slotted(img) {
+			width: 100%;
+			vertical-align: bottom;
+			border-radius: $border-radius;
+			transition: .3s ease;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+		.pj-card__img-container {
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		.details__button {
+			.button__text::after {
+				width: 100%;
+				background-color: $dark-80;
+			}
+
+			svg {
+				.button__arrow-tail {
+					transform: scaleX(1.25);
+				}
+				.button__arrow-head {
+					transform: translateX(6px);
+				}
+			}
+		}
+	}
+
+	.pj-card__details {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: $space-4xs;
+
+		.details__tag-list {
+			list-style-type: none;
+			display: flex;
+			gap: $space-3xs;
+		}
+
+		@include media("<=phone") {
+			display: none;
+		}
+	}
+
+	.pj-card__title {
+		margin-bottom: $space-2xs;
+	}
+}
+
+.pj-card {
+
+}
+

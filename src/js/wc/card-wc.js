@@ -22,14 +22,12 @@ cardTemplate.innerHTML = /*html*/`
 export default class Card extends HTMLElement {
 	constructor() {
 		super();
-
 		this.attachShadow({ mode: 'open' });
 		// how to use scss with a web compoent
 		// https://github.com/parcel-bundler/parcel/discussions/5847
 		const style = document.createElement('style');
 		this.shadowRoot.appendChild(style);
 		style.textContent = cardStyles;
-
 		// Using 'cloneNode(true)' enable to re-use the component multiple times in page.
 		// https://stackoverflow.com/q/69054340/7889584
 		this.shadowRoot.appendChild(cardTemplate.content.cloneNode(true));
