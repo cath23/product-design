@@ -7,15 +7,16 @@
     "sass": "^1.56.1"
   },
   "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.8.0",
     "@parcel/transformer-inline-string": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
     "@parcel/validator-eslint": "^2.8.0",
     "eslint": "^8.28.0"
   },
   "scripts": {
-    "dev": "parcel src/*.html --no-source-maps",
-    "serve": "parcel src/index.html --no-source-maps",
-    "build": "parcel build src/*.html --no-source-maps --no-optimize"
+    "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html",
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html --no-optimize"
   },
   "repository": {
     "type": "git",
