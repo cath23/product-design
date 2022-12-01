@@ -3,15 +3,16 @@ import projectCardStyles from 'bundle-text:../../../scss/wc/home-page/project-ca
 const projectCardTemplate = document.createElement('template');
 
 /**
- * The projectCardTemplate contains two card variants: 'quote' and 'list' card
- * To choose the variant you want to use just add a 'type' attribute when consuming the component
- * and pass the variant of your preference. Eg <card-wc type:"quote"><card-wc/>.
- * The corresponding variant is handled directly via the component's CSS.
+ * The project-card-wc is a clickable card component for a project item.
+ * To use it, pass:
+ * - for the clickable card: a pj-page-url attribute with a url.
+ * - for the image of the card: an img tag with slot name 'image'
+ * - for the tags: two spans with slot names 'tag1'/'tag2' respectively
+ * - for the project title: a span with slot name 'title'
  */
-// // todo change the above comment
-let projectPageUrl;
-// let imageUrl = 'imageURL asdasd';
+
 // The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
+let projectPageUrl;
 projectCardTemplate.innerHTML = /*html*/`
 	<div class="pj-card">
 	<a href=${projectPageUrl}>
@@ -42,7 +43,6 @@ export default class ProjectCard extends HTMLElement {
 		super();
 		this.attachShadow({mode: 'open'});
 		this.projectPageUrl = this.getAttribute('pj-page-url');
-		// this.image = this.getAttribute('image');
 
 		// how to use scss with a web compoent
 		// https://github.com/parcel-bundler/parcel/discussions/5847
@@ -56,27 +56,8 @@ export default class ProjectCard extends HTMLElement {
 	}
 
 	connectedCallback() {
-		// const src = this.shadowRoot.querySelector('img').getAttribute('src');
-		// console.log(src);
-		// const data = this.getAttribute('mitsos');
-		// this.shadowRoot.querySelector('img').setAttribute('src',data);
-		// console.log(this.shadowRoot.querySelector('img').getAttribute('src'));
-
-		// document.querySelector('img').setAttribute('src',this.getAttribute('data'));
-		// console.log(document.querySelector('img').getAttribute('data'));
-		// console.log(this.data);
-		// console.log(url);
-		// url = this.data;
-		// console.log(url);
-		// imageUrl = this.image;
-		// console.log('imageUrl', imageUrl);
-		console.log(this.getAttributeNames());
-
 		this.shadowRoot.querySelector('a').href = this.projectPageUrl;
 		console.log(this.shadowRoot.querySelector('a').href);
-		// this.shadowRoot.querySelector('.pj-card__img').src = this.image;
-		// console.log('src: ', this.shadowRoot.querySelector('.pj-card__img').src);
-
 	}
 }
 
