@@ -25,7 +25,7 @@ projectCardTemplate.innerHTML = /*html*/`
 				<li class="tag-list__item">•</li>
 				<li class="tag-list__item"><slot name="tag2">Ominus</slot></li>
 			</ul>
-			<button class="button details__button link-text">
+			<button class="details__button button link-text">
 				<span class="button__text">Read case study</span>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line class="button__arrow-tail" x1="5" y1="12" x2="19" y2="12"></line><polyline class="button__arrow-head" points="12 5 19 12 12 19"></polyline></svg>
 			</button>

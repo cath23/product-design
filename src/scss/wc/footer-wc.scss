@@ -1,0 +1,366 @@
+@use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+:host {
+	display: block;
+}
+
+:host([variant="main"]) {
+	.project-variant {
+		display: none;
+	}
+}
+
+:host([variant="project"]) {
+	overflow: hidden;
+
+	.main-variant {
+		display: none;
+	}
+
+	.footer {
+		transition: all 400ms ease-in-out;
+	}
+
+	.footer:hover {
+		background-color: $dark-80;
+		cursor: pointer;
+		::slotted(img) {
+			transform: rotate(0deg) translateX(0px) translateY(0px);
+		}
+
+
+		.button {
+			@include button-animation;
+			.button__text::after {
+				width: 100%;
+				background-color: $light-90;
+			}
+
+			svg {
+				.button__arrow-tail {
+					transform: scaleX(1.25);
+				}
+				.button__arrow-head {
+					transform: translateX(6px);
+				}
+			}
+		}
+	}
+}
+
+.title__link {
+	color: $light-90;
+}
+
+.footer {
+    background-color: $dark-100;
+	.main-variant {
+		padding-block: $space-l;
+
+		@include media("<=phone") {
+			padding-block: $space-xs;
+		}
+		.footer-container {
+			display: grid;
+			grid-template-areas: "title ."
+								"contact social"
+								"location .";
+			column-gap: 1.25rem;
+			justify-items: space-between;
+			// padding-block: $space-l;
+
+			@include media("<=phone") {
+				grid-template-areas: "title"
+									"contact"
+									"social"
+									"location";
+			}
+
+			.footer__title-container {
+				grid-area: title;
+				margin-bottom:  $space-xl;
+
+				@include media("<=phone"){
+					margin-bottom: $space-l;
+				}
+
+				.footer__title {
+					white-space: nowrap;
+					margin-bottom: $space-2xs;
+					color: $light-90;
+
+					@include media("<=phone") {
+						margin-bottom: $space-3xs;
+					}
+				}
+
+				.footer__subtitle {
+					font-size: $d-fs-m;
+					line-height: $lh-2xl;
+					font-weight: $fw-regular;
+					color: $light-60;
+					width: min-content;
+					white-space: nowrap;
+
+					@include media("<=phone") {
+						font-size: $m-fs-m;
+					}
+
+					.coffee-emoji {
+						color: $light-100;
+						display: inline-block;
+						font-size: $d-fs-l;
+						margin-left: 20px;
+						opacity: 0;
+						transform: translateX(-10px);
+						transition: all 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+					}
+
+					&:hover {
+						.coffee-emoji {
+							opacity: 1;
+							transform: translateX(0px);
+						}
+					}
+				}
+			}
+
+			.footer__email {
+				width: min-content;
+				height: fit-content;
+				grid-area: contact;
+				position: relative;
+				display: inline-block;
+				font-size: $d-fs-m;
+				padding-bottom: $space-xs;
+				font-weight: $fw-regular;
+				color: $light-80;
+				margin-bottom: $space-s;
+				border-bottom: 2px solid $light-10;
+				height: 40px;
+
+				@include media("<=phone") {
+					margin-bottom: 1.5rem;
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: -2px;
+					left: 0;
+					background-color: transparent;
+					width: 0%;
+					height: 2px;
+					transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				}
+
+				&:hover {
+					color: $light-100;
+					&::after {
+						width: 100%;
+						background-color: $light-80;
+						opacity: 1;
+					}
+				}
+			}
+
+			.footer__social-list {
+				width: fit-content;
+				grid-area: social;
+				list-style-type: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				justify-self: flex-end;
+				gap: 5vw;
+
+				@include media("<=tablet") {
+					column-gap: 4rem;
+				}
+
+				@include media("<=phone") {
+					flex-direction: column;
+					justify-self: baseline;
+					gap: $space-xs;
+					margin-bottom: $space-m;
+				}
+
+				.social-list__list-item {
+					height: fit-content;
+
+					.list-item__link {
+						position: relative;
+						color: $light-80;
+						font-size: $d-fs-xs;
+						line-height: $lh-l;
+						font-weight: $fw-medium;
+						padding-bottom: 4px;
+						transition: all 300ms ease-in-out;
+
+						&::after {
+							content:'';
+							position: absolute;
+							bottom: -4px;
+							left: 0;
+							width: 0%;
+							height: 2px;
+							opacity: 0;
+							background-color: $light-80;
+							transition: all 300ms ease-in-out;
+						}
+
+						&:hover {
+							color: $light-100;
+							&::after {
+								width: 100%;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+
+			.footer__location-container {
+				grid-area: location;
+				.footer__location {
+					font-size: $d-fs-xs;
+					line-height: $lh-xl;
+					font-weight: $fw-regular;
+					color: $light-40;
+
+					&:first-of-type {
+						margin-bottom: $space-4xs;
+					}
+
+				}
+			}
+		}
+	}
+}
+
+.project-variant {
+	height: 500px;
+
+	@include media("<=phone") {
+		height: 350px;
+	}
+	.footer-container {
+		height: inherit;
+		position: relative;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		align-items: center;
+		padding-block: $space-2xl;
+		gap: $space-s;
+
+
+		@include media(">=phone", "<tablet") {
+			grid-template-columns: 3fr 1fr;
+		}
+
+		@include media(">=desktop") {
+			grid-template-columns: 2fr 1fr;
+		}
+
+		@include media("<=phone") {
+			grid-template-columns: 1fr;
+			padding: 0;
+		}
+
+
+		.footer-content {
+			display: inline-grid;
+			align-content: center;
+			position: relative;
+
+			.footer-content__tag {
+				color: $light-60;
+				text-transform: uppercase;
+				margin-bottom: $space-2xs !important;
+			}
+
+			.footer-content__title {
+				display: block;
+				margin-bottom: $space-l !important;
+
+				// @include media("<=phone") {
+				// 	margin-bot: $space-m !important;
+				// }
+			}
+			// .footer-content__button {
+			// 	color: $light-90;
+			// }
+		}
+		::slotted(img) {
+			// width: 560px;
+			// height: 400px;
+			// transform-origin: 10% 60%;
+			// transition: all .3s ease-in-out;
+			// position: absolute;
+			// right: -275px;
+			// transform: rotate(15deg)translateY(-10px)translateX(54px);
+
+			width: 560px;
+			height: 400px;
+			transform-origin: 15% 91%;
+			transition: all .3s ease-in-out;
+			position: absolute;
+			right: -320px;
+			transform: rotate(15deg)translateY(0px)translateX(28px);
+
+
+			@include media("<=phone") {
+				display: none !important;
+			}
+
+			@include media("<=tablet") {
+				width: 470px;
+				height: 335px;
+				right: -270px;
+
+			}
+
+			@include media (">=desktop") {
+				width: 560px;
+				height: 400px;
+				transform-origin: 15% 91%;
+				transition: all .3s ease-in-out;
+				position: absolute;
+				left: calc(2.5*18vw);
+				transform: rotate(15deg)translateY(0px)translateX(28px);
+			}
+		}
+	}
+}
+
+// .footer {
+// 	transition: all 400ms ease-in-out;
+// }
+
+// .footer:hover {
+// 	background-color: $dark-80;
+// 	cursor: pointer;
+// 	::slotted(img) {
+// 		transform: rotate(0deg) translateX(0px) translateY(0px);
+// 	}
+
+
+// 	.button {
+// 		@include button-animation;
+// 		.button__text::after {
+// 			width: 100%;
+// 			background-color: $light-90;
+// 		}
+
+// 		svg {
+// 			.button__arrow-tail {
+// 				transform: scaleX(1.25);
+// 			}
+// 			.button__arrow-head {
+// 				transform: translateX(6px);
+// 			}
+// 		}
+// 	}
+// }

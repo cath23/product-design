@@ -12,8 +12,10 @@
 	.pj-card__img-container {
 		position: relative;
 		margin-bottom: $space-xs;
-		// width: 200px;
-		// height: 200px;
+
+		@include media("<=phone") {
+			margin-bottom: $space-2xs;
+		}
 
 		&::after {
 			position: absolute;
@@ -82,6 +84,10 @@
 
 	.pj-card__title {
 		margin-bottom: $space-2xs;
+
+		@include media("<=phone") {
+			margin-bottom: $space-3xs;
+		}
 	}
 }
 
