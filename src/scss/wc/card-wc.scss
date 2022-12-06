@@ -65,7 +65,7 @@
                 @-moz-document url-prefix() {
                     // on firefox text-indext is different compared to chrome.
                     padding-left: 1.2rem !important;
-                    text-indent: -$m-fs-m;
+                    text-indent: -$m-fs-l;
                 }
             }
         }

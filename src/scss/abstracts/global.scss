@@ -71,7 +71,7 @@ main {
     height: inherit;
 }
 
-h1 {
+h1, .project-title, .footer__title {
     font-size: $d-fs-2xl;
     font-weight: $fw-semiBold;
     line-height: $lh-m;
@@ -79,7 +79,7 @@ h1 {
     color: $dark-80;
 
     @include media("<=phone") {
-        font-size: $m-fs-xl;
+        font-size: $m-fs-2xl;
         line-height: $lh-s;
         letter-spacing: $ls-s;
     }
@@ -93,7 +93,7 @@ h2 {
     color: $dark-80;
 
     @include media("<=phone") {
-        font-size: $m-fs-l;
+        font-size: $m-fs-xl;
         letter-spacing: $ls-s;
     }
 }
@@ -111,7 +111,7 @@ h3 {
     }
 
     @include media("<=phone") {
-        font-size: $m-fs-m;
+        font-size: $m-fs-l;
         letter-spacing: $ls-s;
         line-height: $lh-m;
 
@@ -130,7 +130,7 @@ h4 {
     text-transform: uppercase;
 
     @include media("<=phone") {
-        font-size: $m-fs-xs;
+        font-size: $m-fs-s;
     }
 }
 
@@ -147,7 +147,7 @@ p, .bd-text-regular {
     }
 
     @include media("<=phone") {
-        font-size: $m-fs-m;
+        font-size: $m-fs-l;
         font-weight: $fw-regular;
         letter-spacing: $ls-m;
     }
@@ -165,7 +165,7 @@ a {
     color: $dark-80;
 
     @include media("<=phone") {
-        font-size: $m-fs-s;
+        font-size: $m-fs-m;
         line-height: $lh-l;
         letter-spacing: $ls-m;
     }
@@ -216,16 +216,17 @@ a {
 .container-sm {
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
+
 }
 
 .center-hrz {
-    width: 100%;
     // display: flex;
     // flex-flow: column;
     // align-items: center;
 
-    @include media("<=tablet") {
-        padding-inline: 5rem;
+    @include media(">phone") {
+        padding-inline: 5rem !important;
     }
 
     @include media("<=phone") {
@@ -257,17 +258,12 @@ a {
     font-style: italic;
 }
 
-
-
-.button {
-    display: flex;
-    align-items: center;
-    gap: $space-3xs;
-    height: 40px;
-    color: $dark-80;
-    background: none;
-    border: none;
-    transform: translateX(0);
+@mixin button-animation {
+    &.light {
+        color: $light-90;
+        .button__text {
+        }
+    }
 
     .button__text {
         position: relative;
@@ -299,7 +295,6 @@ a {
 
     &:hover {
         cursor: pointer;
-
         .button__text {
             &::after {
                 width: 100%;
@@ -316,6 +311,19 @@ a {
             }
         }
     }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: $space-3xs;
+    height: 40px;
+    color: $dark-80;
+    background: none;
+    border: none;
+    transform: translateX(0);
+
+    @include button-animation;
 }
 
 /** ..:: Animation ::.. **/

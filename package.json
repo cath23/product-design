@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "@parcel/resolver-glob": "^2.8.0",
+    "babel-plugin-transform-glob-import": "^1.0.1",
     "parcel": "^2.8.0",
     "sass": "^1.56.1"
   },
@@ -14,9 +16,9 @@
     "eslint": "^8.28.0"
   },
   "scripts": {
-    "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html",
+    "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html assets/**",
     "serve": "parcel src/index.html",
-    "build": "parcel build src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html --no-optimize"
+    "build": "parcel build src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html assets/** --no-optimize"
   },
   "repository": {
     "type": "git",
