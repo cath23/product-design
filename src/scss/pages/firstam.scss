@@ -1,0 +1,27 @@
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+.pj-hero {
+	background-color: $bg-firstam;
+	height: 80vh;
+	padding: $space-xl;
+	display: flex;
+	align-items: center;
+
+	@include media("<=tablet") {
+		height: 70vh;
+		padding: $space-l;
+	}
+
+	@include media("<=phone") {
+		height: auto;
+		padding: $space-l $space-xs;
+	}
+.pj-hero__img {
+	display: block;
+		aspect-ratio: 19/15;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+}

@@ -53,9 +53,16 @@ video {
   max-width: 100%;
 }
 
-
-
-
+figure {
+    text-align: center;
+    display: grid;
+    gap: $space-2xs;
+    align-content: start;
+    place-items: center;
+    img {
+        border-radius: $border-radius;
+    }
+}
 
 header li {
     list-style-type: none;
@@ -71,7 +78,7 @@ main {
     height: inherit;
 }
 
-h1, .project-title, .footer__title {
+h1, .project-title, .footer__title, .header__title {
     font-size: $d-fs-2xl;
     font-weight: $fw-semiBold;
     line-height: $lh-m;
@@ -125,7 +132,7 @@ h3 {
 h4 {
     font-size: $d-fs-xs;
     font-weight: $fw-heavy;
-    line-height: 140%;
+    line-height: $lh-l;
     color: $dark-40;
     text-transform: uppercase;
 
@@ -134,7 +141,7 @@ h4 {
     }
 }
 
-p, .bd-text-regular {
+p, .bd-text-regular, ol, ul {
     font-size: $d-fs-l;
     font-weight: $fw-regular;
     line-height: $lh-2xl;
@@ -197,6 +204,7 @@ a {
     line-height: $lh-2xl;
     letter-spacing: $ls-s;
     color: $dark-80;
+    text-align: center;
 }
 
 .quote-caption-text {
@@ -209,13 +217,13 @@ a {
 
 .container-lg {
     max-width: 1440px;
-    margin: 0 auto;
+    margin-inline: auto;
     width: 100%;
 }
 
 .container-sm {
     max-width: 800px;
-    margin: 0 auto;
+    margin-inline:auto;
     width: 100%;
 
 }
@@ -257,6 +265,20 @@ a {
 .italic {
     font-style: italic;
 }
+
+.bg-white {
+    background-color: $bg-white;
+}
+
+.bg-grey {
+    background-color: $bg-grey;
+}
+
+.bg-dark {
+    background-color: $bg-dark;
+}
+
+
 
 @mixin button-animation {
     &.light {
@@ -345,4 +367,26 @@ a {
      50% { transform: rotate(10.0deg) }
      60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
     100% { transform: rotate( 0.0deg) }
+  }
+
+  li {
+    list-style-position: inside;
+    text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
+    padding-left: 2rem !important;
+
+    @-moz-document url-prefix() {
+        // on firefox text-indext is different compared to chrome.
+        padding-left: 1.5rem !important;
+        text-indent: -1.4rem;
+    }
+
+    @include media("<=phone") {
+        text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
+        padding-left: 1.6rem !important;
+        @-moz-document url-prefix() {
+            // on firefox text-indext is different compared to chrome.
+            padding-left: 1.2rem !important;
+            text-indent: -$m-fs-l;
+        }
+    }
   }

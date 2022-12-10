@@ -21,7 +21,7 @@ footerTemplate.innerHTML = /*html*/`
 						</div>
 						<p class="footer__subtitle">asdasd</p>
 					</div>
-					<a href="" class="footer__email">kelepourikaterina@gmail.com</a>
+					<p href="" class="footer__email">kelepourikaterina@gmail.com</p>
 					<ul class="footer__social-list">
 						<li class="social-list__list-item">
 							<a href="https://linkedin.com/" class="list-item__link">read.cv</a>
