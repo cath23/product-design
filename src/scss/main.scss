@@ -9,31 +9,32 @@
 }
 
 header {
-    position:sticky;
+    position:fixed;
     top:0;
+    width: 100%;
     z-index: 1;
 }
 
 .hero {
     .hero-text {
-        padding: 12rem 0 11rem 0;
+        padding: 17rem 0 11rem 0; //todo spacing vars do not exist
         position: relative;
 
 
         @include media("<=phone") {
-            padding: 4.5rem 0 9rem 0;
+            padding: $space-3xl 0 $space-3xl 0;
         }
 
-        &::after {
-            content: url(../assets/purple-tag.svg);
-            position: absolute;
-            bottom: 20%;
-            left: 102%;
+        // &::after {
+        //     content: url(../assets/purple-tag.svg);
+        //     position: absolute;
+        //     bottom: 20%;
+        //     left: 102%;
 
-            @include media("<=tablet") {
-                display: none;
-            }
-        }
+        //     @include media("<=tablet") {
+        //         display: none;
+        //     }
+        // }
 
         // CSS for dots svg on hero background
         // Use background image on a fluid container whithout margins, its safer.

@@ -1,0 +1,51 @@
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+:host {
+	display: block;
+	// background-color: lightgreen;
+
+
+}
+
+.image-container {
+	::slotted([entity]) {
+		margin-bottom: $space-m;
+	}
+
+	::slotted([image-group]) {
+		display: flex;
+		gap: $space-2xs;
+
+		@include media("<=phone") {
+			flex-flow: column;
+			align-items: center;
+			gap: $space-m;
+		}
+	}
+
+	// ::slotted([full-image]) {
+	// 	width: 100vw;
+	// 	position: relative;
+	// 	left: 50%;
+	// 	right: 50%;
+	// 	margin-left: -50vw;
+	// 	margin-right: -50vw;
+	// }
+
+
+	// ::slotted([image]) {
+	// 	text-align: center;
+	// 	display: grid;
+	// 	gap: $space-2xs;
+	// 	// border: 2px solid violet;
+	// }
+
+	::slotted([entity]:first-child) {
+		margin-top: 5rem;
+	}
+
+	::slotted([entity]:last-child) {
+		margin-bottom: 5rem;
+	}
+}

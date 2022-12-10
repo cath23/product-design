@@ -1,4 +1,4 @@
-import cardStyles from 'bundle-text:../../scss/wc/card-wc.scss';
+import cardStyles from 'bundle-text:../../../scss/wc/projects/card-wc.scss';
 
 const cardTemplate = document.createElement('template');
 /**

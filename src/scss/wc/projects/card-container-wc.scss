@@ -3,16 +3,24 @@
 @use "/src/scss/abstracts/tokens.scss" as *;
 
 :host {
+    display: block;
+}
+.card-container {
     width: 100%;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 1fr;
 
     @include media("<=phone") {
         // switch to flex on mobile, since it's just one column and evenly sized rows
         display: flex;
         flex-flow: column;
+    }
+
+    ::slotted(:nth-child(2)) {
+        grid-column: 2 / 3;
+        grid-row: 1;
     }
 
     ::slotted(:nth-child(3)) {

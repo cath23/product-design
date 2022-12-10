@@ -21,7 +21,9 @@ $light-10: #ffffff1a; // Case study card background color on dark background
 // Background
 $bg-white: hsla(234, 16%, 98%, 1); // Used as a global background on every page + on surfaces on light background - E.g. in case studies
 $bg-grey: hsla(204, 19%, 95%, 1); // Used on surfaces on grey background - E.g. sections in case studies
-$bg-dark: hsl(240, 58%, 4%, 1); // Used on surfaces on dark background - E.g. sections in case studies *** Same as Dark/100%
+$bg-dark: hsl(240, 58%, 4%, 1); // Used on suraces on dark background - E.g. sections in case studies *** Same as Dark/100%
+
+$bg-firstam: hsla(198, 61%, 51%, 1);
 
 // ..:: Typography ::..
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");

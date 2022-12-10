@@ -16,9 +16,9 @@
     "eslint": "^8.28.0"
   },
   "scripts": {
-    "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html assets/**",
+    "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html src/pages/*.html src/pages/projects/*.html assets/**",
     "serve": "parcel src/index.html",
-    "build": "parcel build src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html assets/** --no-optimize"
+    "build": "parcel build src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html src/pages/*.html src/pages/projects/*.html assets/** --no-optimize"
   },
   "repository": {
     "type": "git",
