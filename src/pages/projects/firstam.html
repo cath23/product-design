@@ -24,6 +24,7 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 
+    <!-- <script type="module" src="../../js/css.js" defer></script> -->
     <script type="module" src="../../js/index.js" defer></script>
 
     <link rel="stylesheet" href="../../scss/pages/firstam.scss">
@@ -37,15 +38,13 @@
         <img class="pj-hero__img" src="/src/assets/projects/firstam/firstam-transparent.png" alt="image showing a floor plan designed inside the app represented">
     </div>
 <main>
-
-
     <section-wc class="center-hrz">
         <header-section-wc>
             <span slot="header-title">Overview</span>
         </header-section-wc>
 
         <p>
-            Reimagining the Sketch* product experience was my first ever large-scale client project and one that will always have a place in my heart. In 2018, I was the sole designer at the software agency I was working. I joined the project from the beginning and continued until it ended one year later. I've always liked exploring new ways of collaboration and diving deeper into brainstorming experiments, which was the main reason I was chosen to join the team, as my company was also open to experimentation at that time.
+            Reimagining the Sketch* product experience was <span class="bold">my first ever large-scale client project</span> and one that will always have a place in my heart. In 2018, I was the sole designer at the software agency I was working. I joined the project from the beginning and continued until it ended one year later. I've always liked exploring new ways of collaboration and diving deeper into brainstorming experiments, which was the main reason I was chosen to join the team, as my company was also open to experimentation at that time.
         </p>
 
         <p>
@@ -53,7 +52,7 @@
         </p>
 
         <p>
-            Even though Sketch had been distributed to its customers and employees for many years, there had been significant shifts to competitive products over time. Eventually, our clients approached my agency, intending to rebrand and improve the user experience of their product but also rewrite the codebase from scratch.
+            Even though Sketch had been distributed to its customers and employees for many years, there had been <span class="bold">significant shifts to competitive products over time.</span> Eventually, our clients approached my agency, intending to <span class="bold">rebrand and improve the user experience</span> of their product but also rewrite the codebase from scratch.
         </p>
     </section-wc>
 
@@ -64,19 +63,19 @@
         </header-section-wc>
 
         <p>
-            It was important for me to understand what exactly sparked our clients' decision to reinvent the inspection experience entirely. Was their decision based on customer data or feedback? Was it because of shifts in business objectives? And if so, how could my team and I better serve that goal?
+            It was important for me to <span class="bold">understand what exactly sparked our clients' decision</span> to reinvent the inspection experience entirely. Was their decision based on customer data or feedback? Was it because of shifts in business objectives? And if so, how could my team and I better serve that goal?
         </p>
         <p>
             I teamed up with the Product Manager and UI Developer, and we prepared a research plan together. Unfortunately, due to time and budget limitations, we had only three weeks to extract as much knowledge as possible.
         </p>
         <p>
-            In the beginning, our team had no clue about how the appraisal business works and what the property inspectors' workflow looks like, so we took the chance to organize multiple interviews with various stakeholders, along with chunks of desk research. At the end of each interview, I was relieved to clear up any confusion I previously had but, at the same time, I generated double the questions for the next one. As it seemed overwhelming when we started, we managed to structure a knowledge repository for our future reference after a couple of weeks.
+            In the beginning, <span class="bold">our team had no clue about how the appraisal business works</span> and what the property inspectors' workflow looks like, so we took the chance to organize <span class="bold">multiple interviews with various stakeholders</span>, along with chunks of desk research. At the end of each interview, I was relieved to clear up any confusion I previously had but, at the same time, I generated double the questions for the next one. As it seemed overwhelming when we started, we managed to structure a knowledge repository for our future reference after a couple of weeks.
         </p>
 
         <card-container class="container-sm">
             <card-wc class="card" type="list">
                 <span slot="list-title">Learnings that stood out</span>
-                <li>Younger generations are joining and leaving the field relatively soon because of outdated technology.</li>
+                <li list-item>Younger generations are joining and leaving the field relatively soon because of outdated technology.</li>
                 <li>The overall product experience didn't support a seamless process where inspectors could save time, keep costs low and avoid double inspections or errors.</li>
             </card-wc>
         </card-container>
@@ -101,10 +100,10 @@
         </p>
 
         <image-container-wc class="container-sm image-container">
-            <figure entity image>
-                <img src="/src/assets/projects/firstam/image.jpg" alt="an image">
-                <figcaption class="caption-text">Property inspector's high-level workflow</figcaption>
-            </figure>
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/image.jpg" alt="an image">
+                <span slot="caption">Property inspector's high-level workflow</span>
+            </figure-wc>
         </image-container-wc>
     </section-wc>
 
@@ -154,31 +153,24 @@
             </card-wc>
         </card-container>
 
-    <image-container-wc>
-        <div entity image-group>
-            <figure image class="group__image-wrapper">
-                <img class="group__wrapper__image" src="/src/assets/projects/firstam/image-group-1.jpg" alt="an image">
-                <figcaption class="group__wrapper__caption caption-text">No thumbnail of the photo taken</figcaption>
-            </figure>
-            <figure image>
-                <img class="group__wrapper__image" src="/src/assets/projects/firstam/image-group-2.jpg" alt="an image">
-                <figcaption class="group__wrapper__caption caption-text">Related fields are not grouped together</figcaption>
-            </figure>
-            <figure image>
-                <img class="group__wrapper__image" src="/src/assets/projects/firstam/image-group-3.jpg" alt="an image">
-                <figcaption class="group__wrapper__caption caption-text">Multiple sub-levels / not flat hierarchy</figcaption>
-            </figure>
-        </div>
-    </image-container-wc>
-    <image-container-wc class="container-sm image-container">
-        <figure entity image>
-            <img src="/src/assets/projects/firstam/Rectangle 229.jpg" alt="an image">
-            <figcaption class="caption-text">Inability to aim correctly, can't drag objects/walls/corners in order to move, unclear select/draw mode results in mistakes (e.g. accidentally starting drawing when placing objects), snapping to grid is not working every time (e.g. when splitting areas), inability to scale/rotate objects by interacting with them directly, progress is lost while editing when someone else takes over, and more…</figcaption>
-        </figure>
-    </image-container-wc>
+
+        <image-container-wc class="container-sm image-container">
+            <figure-wc group>
+                <img slot="image1" src="/src/assets/projects/firstam/image-group-1.jpg" alt="an image">
+                <span slot="caption1">Property inspector's high-level workflow</span>
+                <img slot="image2" src="/src/assets/projects/firstam/image-group-2.jpg" alt="an image">
+                <span slot="caption2">Property inspector's high-level workflow</span>
+                <img slot="image3" src="/src/assets/projects/firstam/image-group-3.jpg" alt="an image">
+                <span slot="caption3">Property inspector's high-level workflow</span>
+            </figure-wc>
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 229.jpg" alt="an image">
+                <span slot="caption">Property inspector's high-level workflow</span>
+            </figure-wc>
+        </image-container-wc>
     </section-wc>
 
-    <section-wc class="center-hrz bg-grey">
+    <!-- <section-wc class="center-hrz bg-grey">
         <header-section-wc>
             <span slot="header-subtitle">product discovery</span>
             <span slot="header-title">END...</span>
@@ -193,26 +185,6 @@
 
 
 
-
-
-
-        <!-- <div image>
-            <img src="/src/assets/image.jpg" alt="an image">
-            <span class="caption-text">Early sketching concepts</span>
-        </div>
-
-        <div image>
-            <img src="/src/assets/image.jpg" alt="an image">
-            <span class="caption-text">Early sketching concepts</span>
-        </div>
-        <div image>
-            <img src="/src/assets/image.jpg" alt="an image">
-            <span class="caption-text">Early sketching concepts</span>
-        </div>
-        <div image>
-            <img src="/src/assets/image.jpg" alt="an image">
-            <span class="caption-text">Early sketching concepts</span>
-        </div> -->
 
         <image-container-wc class="container-sm image-container">
             <figure entity image>
@@ -296,7 +268,7 @@
                 <span slot="quote-caption">Sr Product Owner</span>
             </card-wc>
     </card-container>
-    </section-wc>
+    </section-wc> -->
 
 
 </main>
