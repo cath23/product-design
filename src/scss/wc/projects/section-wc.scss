@@ -13,45 +13,7 @@
 		padding-block: $space-xl;
 		text-align: left;
 	}
-
-	::slotted(*) {
-		margin-bottom: 40px !important;
-		width: 100%;
-	}
-
-	::slotted(card-container) {
-		margin-block: $space-xl !important;
-	}
-
 	::slotted(:last-child) {
 		margin-bottom: 0px !important;
 	}
-
-
-	// .section__header {
-	// 	margin-bottom: $space-m;
-	// 	.section__header__subtitle{
-	// 		margin: 0 auto;
-	// 		margin-bottom: $space-2xs;
-	// 		width: fit-content;
-
-	// 		@include media("<=phone") {
-	// 			margin-inline: 0;
-	// 		}
-	// 	}
-
-	// 	.section__header__title {
-	// 		margin: 0 auto;
-	// 		margin-bottom: $space-m;
-	// 		width: fit-content;
-
-	// 		@include media("<=phone") {
-	// 			margin-inline: 0;
-	// 		}
-	// 	}
-
-	// 	.section__header__text {
-
-	// 	}
-	// }
 }

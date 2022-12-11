@@ -2,35 +2,40 @@
 @use "./breakpoints.scss" as *;
 
 // ..:: CSS Reset ::.. // todo consider changing this to Josh Cameau's CSS minimal reset
-*,
-*:before,
-*:after {
-    overscroll-behavior: none;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    font-family: $font-family;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+* {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: $font-family;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+
 /* makes sizing simpler */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
 
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 
-* {
-  margin: 0;
-  padding: 0;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
 
 /* dark mode user-agent-styles */
 
@@ -42,6 +47,7 @@ html {
 
 body {
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* responsive images/videos */
@@ -53,16 +59,16 @@ video {
   max-width: 100%;
 }
 
-figure {
-    text-align: center;
-    display: grid;
-    gap: $space-2xs;
-    align-content: start;
-    place-items: center;
-    img {
-        border-radius: $border-radius;
-    }
-}
+// figure {
+//     text-align: center;
+//     display: grid;
+//     gap: $space-2xs;
+//     align-content: start;
+//     place-items: center;
+//     img {
+//         border-radius: $border-radius;
+//     }
+// }
 
 header li {
     list-style-type: none;
@@ -369,24 +375,3 @@ a {
     100% { transform: rotate( 0.0deg) }
   }
 
-  li {
-    list-style-position: inside;
-    text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
-    padding-left: 2rem !important;
-
-    @-moz-document url-prefix() {
-        // on firefox text-indext is different compared to chrome.
-        padding-left: 1.5rem !important;
-        text-indent: -1.4rem;
-    }
-
-    @include media("<=phone") {
-        text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
-        padding-left: 1.6rem !important;
-        @-moz-document url-prefix() {
-            // on firefox text-indext is different compared to chrome.
-            padding-left: 1.2rem !important;
-            text-indent: -$m-fs-l;
-        }
-    }
-  }

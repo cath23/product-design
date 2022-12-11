@@ -6,7 +6,7 @@ const imageContainerTemplate = document.createElement('template');
 // The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 imageContainerTemplate.innerHTML = /*html*/`
 	<div class="image-container">
-		<slot></slot>
+		<slot class="slot"></slot>
 	</div>
 `;
 

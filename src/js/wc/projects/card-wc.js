@@ -15,7 +15,7 @@ cardTemplate.innerHTML = /*html*/`
     </div>
     <div class="list-container">
         <h3 class="list-title bold"><span class="emoji" role="img" aria-label="emoji pointer">👉&nbsp</span><slot name="list-title"></slot></h3>
-        <ul class="list-content bd-text-small"><slot> Insert: a li a number elements with slot="list-item"</slot></ul>
+        <ul class="list bd-text-small"><slot> Insert: a li a number elements with slot="list-item"</slot></ul>
     </div>
     `;
 

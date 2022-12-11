@@ -23,6 +23,28 @@
     .quote-container * {
         display: none;
     }
+
+    ::slotted(li) {
+        list-style-position: inside;
+        text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
+        // padding-left: 2rem !important;
+
+        @-moz-document url-prefix() {
+            // on firefox text-indext is different compared to chrome.
+            // padding-left: 1.5rem !important;
+            text-indent: -1.4rem;
+        }
+
+        @include media("<=phone") {
+            text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
+            // padding-left: 1.6rem !important;
+            @-moz-document url-prefix() {
+                // on firefox text-indext is different compared to chrome.
+                // padding-left: 1.2rem !important;
+                text-indent: -$m-fs-l;
+            }
+        }
+    }
 }
 
 :host([type="quote"]) {
@@ -36,8 +58,9 @@
 .list-container {
     // Align emoji with text
     // https://stackoverflow.com/a/74521221/7889584
+
     .list-title {
-        margin-bottom: 1.5rem;
+        margin-bottom: $space-s;
         vertical-align: baseline;
         display: inline-flex;
 
@@ -47,7 +70,11 @@
         }
     }
 
-    .list-content {
+    .list {
+        @include media("<=phone") {
+            padding-left: 1.75rem;
+        }
+
         ::slotted(:not(:last-child)) {
             margin-bottom: 0.5rem !important;
         }

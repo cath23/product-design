@@ -1,0 +1,48 @@
+@use "/src/scss/abstracts/global.scss" as *;
+@use "/src/scss/abstracts/breakpoints.scss" as *;
+@use "/src/scss/abstracts/tokens.scss" as *;
+
+:host {
+	display: block;
+}
+
+:host([group]) {
+	.figure-container {
+		.single {
+			display: none;
+		}
+	}
+}
+
+:host([single]) {
+	.figure-container {
+		.group {
+			display: none;
+		}
+	}
+}
+
+.figure-container {
+	.figure {
+		text-align: center;
+		display: grid;
+		gap: $space-2xs;
+		align-content: start;
+		place-items: center;
+	}
+
+	.group {
+		display: flex;
+		gap: $space-2xs;
+
+		@include media("<=phone") {
+			flex-flow: column;
+			align-items: center;
+			gap: $space-m;
+		}
+	}
+
+	::slotted(img) {
+		border-radius: $border-radius;
+	}
+}
