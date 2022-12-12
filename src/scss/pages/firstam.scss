@@ -27,6 +27,10 @@
 	}
 }
 
+card-container {
+	margin-block: $space-xl;
+}
+
 image-container-wc {
 	&>figure-wc {
 		margin-bottom: $space-m;

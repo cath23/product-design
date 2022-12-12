@@ -17,41 +17,6 @@
         @include media("<=phone") {
             padding: $space-3xl 0 $space-3xl 0;
         }
-
-        // &::after {
-        //     content: url(../assets/purple-tag.svg);
-        //     position: absolute;
-        //     bottom: 20%;
-        //     left: 102%;
-
-        //     @include media("<=tablet") {
-        //         display: none;
-        //     }
-        // }
-
-        // CSS for dots svg on hero background
-        // Use background image on a fluid container whithout margins, its safer.
-        // &::before {
-        //     content: url(../assets/particles-background.png);
-        //     position: absolute;
-        //     top: 15%;
-        //     left: 90%;
-        //     height: 100%;
-        //     // width: 80px;
-        //     z-index: -1;
-
-        //     @include media("<=tablet") {
-        //         height: 100%;
-        //         bottom: -40%;
-        //         left: 70%;
-        //     }
-
-        //     @include media("<=phone") {
-        //         bottom: -10%;
-        //         left: 70%;
-        //         content: none;
-        //     }
-        // }
     }
 }
 
