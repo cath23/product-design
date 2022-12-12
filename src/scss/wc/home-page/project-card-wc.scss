@@ -75,6 +75,8 @@
 			list-style-type: none;
 			display: flex;
 			gap: $space-3xs;
+			// remove default list padding
+			padding-left: 0;
 		}
 
 		@include media("<=phone") {
@@ -90,8 +92,3 @@
 		}
 	}
 }
-
-.pj-card {
-
-}
-

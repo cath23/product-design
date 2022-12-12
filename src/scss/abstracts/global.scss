@@ -7,35 +7,16 @@
     box-sizing: border-box;
 }
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* 1. Use a more-intuitive box-sizing model. */
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: $font-family;
   }
-  /*
-    2. Remove default margin
-  */
-  * {
-    margin: 0;
-  }
 
-/* makes sizing simpler */
-
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
-
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
+/* 2. Remove default margin */
+* {
+margin: 0;
+}
 
 /* dark mode user-agent-styles */
 
@@ -44,7 +25,6 @@ html {
 }
 
 /* min body height */
-
 body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -58,17 +38,6 @@ video {
   display: block;
   max-width: 100%;
 }
-
-// figure {
-//     text-align: center;
-//     display: grid;
-//     gap: $space-2xs;
-//     align-content: start;
-//     place-items: center;
-//     img {
-//         border-radius: $border-radius;
-//     }
-// }
 
 header li {
     list-style-type: none;
@@ -231,20 +200,16 @@ a {
     max-width: 800px;
     margin-inline:auto;
     width: 100%;
-
 }
 
-.center-hrz {
-    // display: flex;
-    // flex-flow: column;
-    // align-items: center;
+.center-hrz { // todo rename/refactor this class
 
     @include media(">phone") {
-        padding-inline: 5rem !important;
+        padding-inline: 5rem !important; // todo check if important is needed, no var for this spacing
     }
 
     @include media("<=phone") {
-        padding-inline: 1.5rem;
+        padding-inline: $space-xs;
     }
 }
 
@@ -284,13 +249,9 @@ a {
     background-color: $bg-dark;
 }
 
-
-
 @mixin button-animation {
     &.light {
         color: $light-90;
-        .button__text {
-        }
     }
 
     .button__text {

@@ -2,49 +2,8 @@
 @use "/src/scss/abstracts/tokens.scss" as *;
 @use "/src/scss/abstracts/breakpoints.scss" as *;
 
-.quote-container,
-.list-container {
-    justify-content: center;
-    flex-flow: column;
-    height: 100%;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    background-color: $light-60;
-    box-shadow: $shadow-60;
-
-    @include media("<=phone") {
-        padding: 1.5rem;
-    }
-}
-
-:host([type="list"]) {
-    // it's a list card, show no quote content
-    .quote-container,
-    .quote-container * {
-        display: none;
-    }
-
-    ::slotted(li) {
-        list-style-position: inside;
-        text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
-        // padding-left: 2rem !important;
-
-        @-moz-document url-prefix() {
-            // on firefox text-indext is different compared to chrome.
-            // padding-left: 1.5rem !important;
-            text-indent: -1.4rem;
-        }
-
-        @include media("<=phone") {
-            text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
-            // padding-left: 1.6rem !important;
-            @-moz-document url-prefix() {
-                // on firefox text-indext is different compared to chrome.
-                // padding-left: 1.2rem !important;
-                text-indent: -$m-fs-l;
-            }
-        }
-    }
+:host {
+	display: block;
 }
 
 :host([type="quote"]) {
@@ -55,12 +14,59 @@
     }
 }
 
+:host([type="list"]) {
+    // it's a list card, show no quote content
+    .quote-container,
+    .quote-container * {
+        display: none;
+    }
+}
+
+.list-container, .quote-container {
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
+    padding: $space-m;
+    border-radius: $border-radius;
+    background-color: $light-60;
+    box-shadow: $shadow-60;
+
+    @include media("<=phone") {
+        padding: 1.5rem;
+    }
+}
+
+
+
+::slotted(li) {
+    list-style-position: inside;
+    text-indent: -1.8rem; // alligns list item text vertically, despite the "list item dot"
+    // padding-left: 2rem !important;
+
+    @-moz-document url-prefix() {
+        // on firefox text-indext is different compared to chrome.
+        // padding-left: 1.5rem !important;
+        text-indent: -1.4rem;
+    }
+
+    @include media("<=phone") {
+        text-indent: -1.5rem; // alligns list item text vertically, despite the "list item dot"
+        // padding-left: 1.6rem !important;
+        @-moz-document url-prefix() {
+            // on firefox text-indext is different compared to chrome.
+            // padding-left: 1.2rem !important;
+            text-indent: -$m-fs-l; // todo what does this mean? I used fonr size
+        }
+    }
+}
+
+
 .list-container {
     // Align emoji with text
     // https://stackoverflow.com/a/74521221/7889584
 
     .list-title {
-        margin-bottom: $space-s;
+        margin-bottom: $space-xs;
         vertical-align: baseline;
         display: inline-flex;
 
@@ -72,17 +78,17 @@
 
     .list {
         @include media("<=phone") {
-            padding-left: 1.75rem;
+            padding-left: 1.75rem; //todo no var for this spacing
         }
 
         ::slotted(:not(:last-child)) {
-            margin-bottom: 0.5rem !important;
+            margin-bottom: $space-3xs !important; // todo is !important needed?
         }
     }
 }
 
 .quote-container {
     .quote-caption {
-        margin-top: 0.5rem;
+        margin-top: $space-3xs;
     }
 }

@@ -4,13 +4,10 @@
 
 
 :host {
-	// height: 80px;
+	display: block;
 	width: 100%;
 	z-index: 1;
-	// align-items: center;
-	// display: flex;
 	position: fixed;
-	// top: 0;
 
 	@include media("<=phone") {
 		height: 64px;
@@ -18,13 +15,11 @@
 
 	.header-container {
 		display: flex;
-		// align-items: center;
 		justify-content: space-between;
-		// height: inherit;
-		padding: 2.5rem 5rem 0 5rem;
+		padding: $space-m 5rem 0 5rem; // todo spacing vars do not exist
 
 		@include media("<=phone") {
-			padding: 1.5rem 1.5rem 0 1.5rem;
+			padding: $space-xs $space-xs 0 $space-xs;
 		}
 
 		.header-home_logo {
@@ -37,7 +32,7 @@
 
 			.header-home_back-emoji {
 				height: 20px;
-				margin-right: 0.5rem;
+				margin-right: $space-3xs;
 			}
 		}
 
@@ -66,17 +61,18 @@
 		display: flex;
 		align-items: center;
 		height: 40px;
-		gap: 2.5rem;
+		gap: $space-m;
 		list-style-type: none;
 
 		@include media("<=phone") {
-			gap: 1.5rem;
+			gap: $space-xs;
 		}
+
 		.header-navigation_list-item {
+			position: relative;
 			display: grid;
 			place-content: center;
 			height: 100%;
-			position: relative;
 
 			.header-navigation_link {
 				color: $dark-40;
@@ -91,6 +87,7 @@
 
 			&.active{
 				position: relative;
+
 				.header-navigation_link::after {
 					content: '';
 					position: absolute;
@@ -114,16 +111,13 @@
 
 				}
 			}
-			.header-navigation_link {
-
-			}
 		}
 	}
 }
 
-
 /* Animation */
 .goBack-anm {
+
 	&:hover {
 		.header-home_back-emoji {
 			animation: 400ms goBack-animation 4 alternate both ease-in-out;

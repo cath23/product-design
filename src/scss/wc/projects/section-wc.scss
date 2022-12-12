@@ -13,7 +13,4 @@
 		padding-block: $space-xl;
 		text-align: left;
 	}
-	::slotted(:last-child) {
-		margin-bottom: 0px !important;
-	}
 }

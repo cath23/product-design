@@ -13,20 +13,20 @@ figureTemplate.innerHTML = /*html*/`
 	<div class="figure-container">
 		<figure class='figure single'>
 			<slot name='image'></slot>
-			<figcaption class='group__wrapper__caption caption-text'><slot name='caption'></slot>Multiple sub-levels / not flat hierarchy</figcaption>
+			<figcaption class='group__wrapper__caption caption-text'><slot name='caption'>Image caption text</slot></figcaption>
 		</figure>
-		<div class="entity group">
+		<div class="group">
 			<figure class='figure'>
 				<slot name='image1'></slot>
-				<figcaption class='group__wrapper__caption caption-text'><slot name='caption1'></slot>Multiple sub-levels / not flat hierarchy</figcaption>
+				<figcaption class='group__wrapper__caption caption-text'><slot name='caption1'>Image caption text</slot></figcaption>
 			</figure>
 			<figure class='figure'>
 				<slot name='image2'></slot>
-				<figcaption class='group__wrapper__caption caption-text'><slot name='caption2'></slot>Multiple sub-levels / not flat hierarchy</figcaption>
+				<figcaption class='group__wrapper__caption caption-text'><slot name='caption2'>Image caption text</slot></figcaption>
 			</figure>
 			<figure class='figure'>
 				<slot name='image3'></slot>
-				<figcaption class='group__wrapper__caption caption-text'><slot name='caption3'></slot>Multiple sub-levels / not flat hierarchy</figcaption>
+				<figcaption class='group__wrapper__caption caption-text'><slot name='caption3'>Image caption text</slot></figcaption>
 			</figure>
 		</div>
 	</div>
