@@ -7,8 +7,8 @@ const headerSectionTemplate = document.createElement('template');
 // The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 headerSectionTemplate.innerHTML = /*html*/`
 		<div class="header">
-			<h4 class="header__subtitle"><slot name="header-subtitle"></slot></h4>
-			<h2 class="header__title"><slot name="header-title"> This is a section header title </slot></h2>
+			<h4  class="header__subtitle"><slot part="subtitle"name="header-subtitle"></slot></h4>
+			<h2 part="title" class="header__title"><slot name="header-title"> This is a section header title </slot></h2>
 		</div>
     `;
 

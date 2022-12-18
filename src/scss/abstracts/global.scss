@@ -58,7 +58,6 @@ h1, .project-title, .footer__title, .header__title {
     font-weight: $fw-semiBold;
     line-height: $lh-m;
     letter-spacing: $ls-xs;
-    color: $dark-80;
 
     @include media("<=phone") {
         font-size: $m-fs-2xl;
@@ -72,7 +71,6 @@ h2 {
     font-weight: $fw-semiBold;
     line-height: $lh-m;
     letter-spacing: $ls-xs;
-    color: $dark-80;
 
     @include media("<=phone") {
         font-size: $m-fs-xl;
@@ -85,7 +83,6 @@ h3 {
     font-weight: $fw-medium;
     letter-spacing: $ls-xs;
     line-height: $lh-s;
-    color: $dark-80;
 
     &.bold {
         font-weight: $fw-bold;
@@ -121,7 +118,6 @@ p, .bd-text-regular, ol, ul {
     font-weight: $fw-regular;
     line-height: $lh-2xl;
     letter-spacing: $ls-s;
-    color: $dark-80;
 
     &.bold {
         font-weight: $fw-bold;
@@ -144,7 +140,6 @@ a {
     font-weight: $fw-regular;
     line-height: $lh-2xl;
     letter-spacing: $ls-s;
-    color: $dark-80;
 
     @include media("<=phone") {
         font-size: $m-fs-m;
@@ -178,7 +173,6 @@ a {
     font-size: $d-fs-s;
     line-height: $lh-2xl;
     letter-spacing: $ls-s;
-    color: $dark-80;
     text-align: center;
 }
 
@@ -237,17 +231,60 @@ a {
     font-style: italic;
 }
 
+// ..:: Theme ::..
+@mixin theme($main, $subtitle, $bold) {
+    h1, h2, h3, p, .bd-text-regular, ol, ul, .bd-text-small, .caption-text {
+        color: $main;
+    }
+
+    header-section-wc::part(title) {
+        color: $main;
+    }
+
+    header-section-wc::part(subtitle) {
+        color: $subtitle;
+    }
+
+    .bold {
+        color: $bold;
+    }
+}
+
+@include theme($dark-80, $dark-40, $dark-100);
+
+
 .bg-white {
     background-color: $bg-white;
+    @include theme($dark-80, $dark-40, $dark-100);
 }
 
 .bg-grey {
     background-color: $bg-grey;
+    @include theme($dark-80, $dark-40, $dark-100);
 }
 
 .bg-dark {
     background-color: $bg-dark;
+    @include theme($light-90, $light-80, $light-100);
+
 }
+
+// header-section-wc::part(title) {
+//         color: mediumpurple !important;
+//     }
+
+// *::part(title) {
+// 	border: 5px solid red;
+//     background-color: greenyellow;
+// }
+
+
+// #green {
+//     * {
+//         color: mediumseagreen;
+//     }
+
+// }
 
 @mixin button-animation {
     &.light {
