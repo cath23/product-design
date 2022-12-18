@@ -27,14 +27,11 @@ footerTemplate.innerHTML = /*html*/`
 							<a href="https://linkedin.com/" class="list-item__link">read.cv</a>
 						</li>
 						<li class="social-list__list-item">
-							<a href="https://www.behance.net/" class="list-item__link">LinkedIn</a>
-						</li>
-						<li class="social-list__list-item">
-							<a href="https://dribbble.com/" class="list-item__link">Instagram</a>
+							<a href="https://www.linkedin.com/in/katerina-kelepouri/" class="list-item__link">LinkedIn</a>
 						</li>
 					</ul>
 					<div class="footer__location-container">
-						<p class="footer__location location2">Tsaritsani, Greece</p>
+						<p class="footer__location location2">Thessaloniki, Greece</p>
 						<p class="footer__location location1">Prague, Czech Republic</p>
 					</div>
 				</div>

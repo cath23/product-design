@@ -36,7 +36,7 @@
         }
 
         @include media('<=phone') {
-            margin-bottom: $space-s;
+            margin-bottom: $space-m;
             &:last-child {
                 margin-bottom: $space-2xl;
             }

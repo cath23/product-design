@@ -6,6 +6,9 @@
 	display: block;
 }
 
+:host([dark]) {
+}
+
 .section-container {
 	padding-block: $space-3xl;
 
@@ -13,4 +16,12 @@
 		padding-block: $space-xl;
 		text-align: left;
 	}
+}
+
+// * {
+// 	color: $color;
+// }
+
+p, .bd-text-regular, ol, ul {
+	color: mediumpurple !important;
 }

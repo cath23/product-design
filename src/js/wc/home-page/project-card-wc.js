@@ -21,9 +21,9 @@ projectCardTemplate.innerHTML = /*html*/`
 		</div>
 		<div class="pj-card__details">
 			<ul class="details__tag-list tag-text">
-				<li class="tag-list__item"><slot name="tag1">Irreverent</slot></li>
+				<li class="tag-list__item"><slot name="tag1">Project tag</slot></li>
 				<li class="tag-list__item">•</li>
-				<li class="tag-list__item"><slot name="tag2">Ominus</slot></li>
+				<li class="tag-list__item"><slot name="tag2">Project tag</slot></li>
 			</ul>
 			<button class="details__button button link-text">
 				<span class="button__text">Read case study</span>
