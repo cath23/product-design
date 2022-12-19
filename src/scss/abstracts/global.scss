@@ -44,7 +44,7 @@ header li {
 }
 
 body {
-    background-color: $bg-white; // todo chek background color in Figma
+    background-color: $bg-light; // todo chek background color in Figma
     height: 100%;
     overflow-x: hidden;
 }
@@ -253,8 +253,8 @@ a {
 @include theme($dark-80, $dark-40, $dark-100);
 
 
-.bg-white {
-    background-color: $bg-white;
+.bg-light {
+    background-color: $bg-light;
     @include theme($dark-80, $dark-40, $dark-100);
 }
 
