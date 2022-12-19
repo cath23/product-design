@@ -38,7 +38,7 @@
         <img class="pj-hero__img" src="/src/assets/projects/firstam/firstam-transparent.png" alt="image showing a floor plan designed inside the app represented">
     </div>
 <main>
-    <section-wc class="center-hrz bg-white">
+    <section-wc class="center-hrz bg-light">
         <header-section-wc>
             <span slot="header-subtitle">Overview overview</span>
             <span slot="header-title">Overview</span>
@@ -165,11 +165,11 @@
             </figure-wc>
             <figure-wc single>
                 <img slot="image" src="/src/assets/projects/firstam/Rectangle 229.jpg" alt="an image">
-                <span slot="caption">Inability to aim correctly, can’t drag objects/walls/corners in order to move, unclear select/draw mode results in mistakes (e.g. accidentally starting drawing when placing objects), snapping to grid is not working every time (e.g. when splitting areas), inability to scale/rotate objects by interacting with them directly, progress is lost while editing when someone else takes over, and more…</span>
+                <span slot="caption">Inability to aim correctly, can't drag objects/walls/corners in order to move, unclear select/draw mode results in mistakes (e.g. accidentally starting drawing when placing objects), snapping to grid is not working every time (e.g. when splitting areas), inability to scale/rotate objects by interacting with them directly, progress is lost while editing when someone else takes over, and more…</span>
             </figure-wc>
         </image-container-wc>
     </section-wc>
-    <section-wc id="green" class="center-hrz bg-dark" dark>
+    <section-wc class="center-hrz bg-dark">
         <header-section-wc>
             <span slot="header-subtitle">debrief</span>
             <span slot="header-title">Planning next steps</span>
@@ -182,9 +182,232 @@
             <li><span class="bold">Analyze the sketching experience of indirect competitors</span> to get inspiration on unique sketching techniques that we could incorporate into our custom solution.</li>
             <li><span class="bold">Solve the problem of switching between the sketch and form</span> view during the upcoming <span class="bold">Design Sprint</span> since that would be our biggest differentiator, and all stakeholders would be present.</li>
         </ol>
-
-
     </section-wc>
+
+    <section-wc class="center-hrz bg-light">
+        <header-section-wc>
+            <span slot="header-subtitle">exploration</span>
+            <span slot="header-title">The first concepts of sketching</span>
+        </header-section-wc>
+
+        <p>
+            Studying different sketching techniques was one of the most enjoyable parts of our research. We knew <span class="bold">sketching using a Numpad was an industry standard</span>, but we also wanted to introduce more freedom when editing shapes. So I came up with 3 different concepts:
+        </p>
+        <ol>
+            <li>Sketching with a Numpad (current solution)</li>
+            <li>Sketching with predefined shapes</li>
+            <li>Freehand sketching</li>
+        </ol>
+
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/image.jpg" alt="an image">
+                <span slot="caption">Early sketching concepts</span>
+            </figure-wc>
+        </image-container-wc>
+
+        <p>
+            <span class="bold">The 2nd concept was discarded</span> because it didn't reflect the inspector's natural workflow. For example, inspectors first measure a wall's length, then draw the line on the app with the Numpad (e.g., by typing 10' → Enter), continuing until they have a closed shape. Drawing with predefined shapes would go against that flow and would require more editing while on the field, which is something we were trying to avoid.
+        </p>
+        <p>
+            <span class="bold">We chose freehand sketching</span> and decided to focus more on the desktop experience, allowing inspectors to manually create or edit shapes using a mouse, something previously impossible.
+        </p>
+    </section-wc>
+
+    <section-wc class="center-hrz bg-grey">
+        <header-section-wc>
+            <span slot="header-subtitle">design sprint</span>
+            <span slot="header-title">Solving the most crucial problem was a team effort</span>
+        </header-section-wc>
+
+        <p>
+            Meanwhile, a 4-day Design Sprint was planned to solve the problem of sketch/form communication. This was my first Design Sprint, an experience that inspired me to dive deeper into workshop facilitation techniques. I won't go through all the workshop's details; I'll only mention that I'd consider it successful. <span class="bold">Allocating time doing UX research allowed us to save time, be informed, ask better questions and narrow down the challenge into smaller chunks.</span>
+        </p>
+        <p>
+            We managed to come up with a solution for our most critical challenge but also generated many other exciting concepts on inspection management, data form navigation, and data collection:
+        </p>
+        <ul>
+            <li>Ability to manage, filter, and manually schedule inspection orders</li>
+            <li>A "Split View" concept that would partially display the legal form as well as the sketching area and a quick transition between the views by a drag gesture.</li>
+            <li>Selecting an area label (e.g., kitchen), zooming into it, and automatically transitioning to the corresponding section on the legal form</li>
+            <li>Displaying complete/incomplete status on area labels</li>
+        </ul>
+
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 241.jpg" alt="an image">
+                <span slot="caption">Our concept produced during the Design Sprint</span>
+            </figure-wc>
+        </image-container-wc>
+
+        <p>
+            Due to time limitations and since our clients wanted to be present during the testing sessions, we recruited 4 participants internally. This wasn't a major blocker, as <span class="bold">the goal of the testing was to observe how people perceived the sketch-form transition and the concept overall</span>, so no prior experience with property inspection was necessary.
+        </p>
+
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 241.jpg" alt="an image">
+                <span slot="caption">The Design Sprint (and first-ever) prototype that was used during the very first usability testing</span>
+            </figure-wc>
+        </image-container-wc>
+
+        <p>
+            We found that everyone responded well to the sketch-form transition concept. The main issues were reported on sketching, especially the bottom, dynamic toolbar, and the plus floating button.
+        </p>
+
+        <!-- There is a fluid width image here -->
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 241.jpg" alt="an image">
+                <span slot="caption">The Design Sprint (and first-ever) prototype that was used during the very first usability testing</span>
+            </figure-wc>
+        </image-container-wc>
+    </section-wc>
+
+    <section-wc class="center-hrz">
+        <header-section-wc>
+            <span slot="header-subtitle">challenges</span>
+            <span slot="header-title">Some challenges along the way</span>
+        </header-section-wc>
+
+        <p>
+            Soon I had an entire product team to work with, consisting of a newcomer PM, 3 full-stack developers, a UI developer, and a QA engineer. <span class="bold">My team could lean on me</span> to keep them up to date as they joined much later. I was responsible for onboarding the new PM in the middle of our development cycle and sharing all business knowledge that I had gathered. I also ensured that I clearly communicated the sketching experience details with the engineers while they started working on a POC.
+        </p>
+        <p>
+            Being a sole designer and supporting the design on multiple devices under <span class="bold">sudden switches on priorities</span>, especially striving for a seamless sketching experience, was undoubtedly overwhelming, as new features and improvements would pop up every week. <span class="bold">Communicating the sketching experience in detail was the most challenging task of all.</span> Prototyping was, of course, an option, but many of the interactions on the web application (like snapping to the grid while aiming or moving objects) were impossible to visualize.
+        </p>
+        <p>
+            To overcome this, I regularly provided notes similar to the ones below in conjunction with short prototype clips. That, fortunately, helped us close the knowledge gap between team members quite soon.
+        </p>
+
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Sketching documentation snippet</span>
+            </figure-wc>
+        </image-container-wc>
+
+
+        <p>
+            I was also responsible for bringing all team members together to exchange ideas and validate whether my proposed solutions aligned with development decisions. Happily, my team was on board to attend <span class="bold">weekly ideation workshops and discussions.</span> In addition to that, I talked with our clients every other day to ensure they were involved and provided direction. That built more trust between us and a sense of mutual respect.
+        </p>
+        <p>
+            Looking back, there could have been a way to partially avoid the overwhelming situation by teaming up early with the PM and working on a clear product roadmap and feature prioritization.
+        </p>
+    </section-wc>
+
+    <section-wc class="center-hrz bg-grey">
+        <header-section-wc>
+            <span slot="header-subtitle">deliverables</span>
+            <span slot="header-title">Diving deeper into the sketching experience</span>
+        </header-section-wc>
+
+        <p>
+            For a long time, I focused on sketch on the web app for an upcoming beta release. I redesigned the menu (now living on the left side), added tooltips explaining the name of the tool along with its keyboard shortcut, and got rid of the idea of dynamic behavior as in the early prototypes. Also, a more meaningful header has been added with undo/redo functionality.
+        </p>
+
+        <p class="bold">Sketching the exterior</p>
+        <p>
+            Switching on the sketch mode was indicated by a small crosshair that would snap to the grid, following the mouse and helping the user aim for setting the starting point and the following corners of the shape. In addition, the pink lines would appear to inform about alignment.
+        </p>
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Sketching the exterior</span>
+            </figure-wc>
+        </image-container-wc>
+
+        <p class="bold">Adding points to an edge</p>
+        <p>
+            By selecting an edge, users could add multiple points to it. Similarly to sketch mode, a corner (point) would start following the mouse to assist in aiming. By clicking anywhere on the canvas, users returned to select mode.
+        </p>
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Adding points to an edge</span>
+            </figure-wc>
+        </image-container-wc>
+
+        <p class="bold">Extrusion and creating curved walls</p>
+        <p>
+            I designed the corners and the edges so that they would slightly change in color on hover and become blue-ish when selected. I added two small arrows around the edge to indicate that it can be moved (locked in one direction). Just like adding points, by selecting an edge, users could turn it into a curve of a predefined SOMETHING, that could be edited. We knew that inspectors always measured the SOMETHING to calculate the curve.
+        </p>
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Extrusion and creating curved walls</span>
+            </figure-wc>
+        </image-container-wc>
+
+
+        <p class="bold">Adding interior walls</p>
+        <p>
+            Interior walls worked in the same way as the exterior, without the need to have closed shapes. I learned during research that inspectors draw diagonal lines by only measuring the A and B, so I designed dashed lines to show their dimensions.
+        </p>
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Adding interior walls</span>
+            </figure-wc>
+        </image-container-wc>
+
+
+        <p class="bold">Adding labels, symbols and object transformation</p>
+        <p>
+            I thought a dragging gesture would be appropriate to add objects to the canvas so that the behavior would work on tablets more naturally as well. A selected object would be marked with a blue outline and squared corners, helping in scaling and rotation, along with changes in the cursor for additional aid.
+        </p>
+        <image-container-wc class="container-sm image-container">
+            <figure-wc single>
+                <img slot="image" src="/src/assets/projects/firstam/Rectangle 242.jpg" alt="an image">
+                <span slot="caption">Adding labels, symbols and object transformation</span>
+            </figure-wc>
+        </image-container-wc>
+    </section-wc>
+
+    <section-wc class="center-hrz">
+        <header-section-wc>
+            <span slot="header-subtitle">pre-release testing</span>
+            <span slot="header-title">A round of usability testing before beta release</span>
+        </header-section-wc>
+
+        <p>
+            Right before the beta release, I performed another round of usability testing. The goal was to test the overall perception of the left toolbar, the ability to sketch and edit an actual floor plan, delete objects and zoom in/out or move around the canvas. For a realistic experience, we used an instance of the development branch instead of a prototype, and we tested 6 people using the usertesting.com platform to experiment with unmoderated testing.
+            After analyzing the videos and organizing all the data, I found that <span class="bold">the following challenges stood out:</span>
+        </p>
+        <ol>
+            <li>Some of the side menu icons were not fully understood. The development instance that was used lacked the implementation of tooltips, as suggested in the prototypes, but that could easily be fixed.</li>
+            <li>All participants had trouble stopping sketching. The current behavior enforced clicking on the select item at the side menu, which was far away from the sketching area. As tooltips and shortcuts still needed to be implemented, users mentioned that it would feel more natural to use the ESC key to cancel and return to select mode.</li>
+            <li>Some participants tried to hover over an edge and immediately drag to move it without it first being selected. To solve this, we tried out a concept where the small arrows around the edges would appear on hover instead of selection, and all the objects on the canvas would be draggable without them having to be selected first.</li>
+        </ol>
+    </section-wc>
+
+    <section-wc class="center-hrz bg-grey">
+        <header-section-wc>
+            <span slot="header-subtitle">results</span>
+            <span slot="header-title">Final thoughts</span>
+        </header-section-wc>
+        <p>
+            While the project was coming to an end, it's tough to say after 1 year how our effort contributed to our client's business goals. The company was suddenly affected by an internal organizational shift which meant the end of our cooperation. The newly structured team managed new priorities and decided to pause the project at that time.
+        </p>
+        <p>
+            For as long as we worked together, I'm glad our UX efforts stood out:
+        </p>
+
+        <card-container class="container-sm">
+            <card-wc class="card" type="quote">
+                <span slot="quote-text">"They were really great at UX/UI at every stage of the project, which a lot of companies can't say."</span>
+                <span slot="quote-caption">Director of Engineering</span>
+            </card-wc>
+        </card-container>
+        <p>
+            On a personal level, as a designer, this project was eye-opening. It allowed me to learn how to work iteratively, exercise my communication skills and overcome my fear of speaking in front of larger audiences. It also inspired me to dive deeper into workshop facilitation techniques.
+        </p>
+        <p>
+            <span class="bold">If you've reached up here, thank you for taking the time to read my story, this project meant a lot to me and my career. 🙂</span>
+        </p>
+    </section-wc>
+
+
 </main>
     <footer-wc variant="project"
         id="contact"

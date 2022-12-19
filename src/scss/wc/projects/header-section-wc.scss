@@ -7,6 +7,8 @@
 }
 
 .header {
+	max-width: 450px;
+	margin: 0 auto;
 	.header__subtitle{
 		margin: 0 auto;
 		margin-bottom: $space-2xs;
@@ -19,7 +21,10 @@
 
 	.header__title {
 		margin: 0 auto;
-		width: fit-content;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
 
 		@include media("<=phone") {
 			margin-inline: 0;
