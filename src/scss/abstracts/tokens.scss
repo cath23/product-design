@@ -20,7 +20,7 @@ $light-10: #ffffff1a; // Case study card background color on dark background
 
 // Background
 $bg-light: hsla(234, 16%, 98%, 1); // Used as a global background on every page + on surfaces on light background - E.g. in case studies
-$bg-grey: hsla(204, 19%, 95%, 1); // Used on surfaces on grey background - E.g. sections in case studies
+$bg-grey: hsl(204, 19%, 95%); // Used on surfaces on grey background - E.g. sections in case studies
 $bg-dark: hsl(240, 58%, 4%, 1); // Used on suraces on dark background - E.g. sections in case studies *** Same as Dark/100%
 
 $bg-firstam: hsla(198, 61%, 51%, 1);
@@ -81,7 +81,9 @@ $space-4xl: 20rem;
 
 // ..:: Border ::..
 $border-medium: 2px;
-$border-radius: 16px;
+$border-radius-l: 16px;
+$border-radius-m: 8px;
+$border-radius-s: 4px;
 
 // ..:: Elevation ::..
 $shadow-60: 0px 0px 30px rgba(0, 0, 0, 0.06);
