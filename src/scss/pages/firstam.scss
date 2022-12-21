@@ -29,6 +29,10 @@
 
 card-container {
 	margin-block: $space-xl;
+
+	card-wc {
+		border-radius: $border-radius;
+	}
 }
 
 image-container-wc {
