@@ -249,13 +249,13 @@ a {
         color: $strong;
     }
 
-    card-wc::part(text) {
-        color: $main;
-    }
-
     card-wc {
         background-color: $light-10;
         border-radius: $border-radius;
+    }
+
+    card-wc::part(text) {
+        color: $main;
     }
 
     card-wc::part(title) {
