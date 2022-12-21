@@ -28,7 +28,7 @@
     height: 100%;
     padding: $space-m;
     border-radius: $border-radius;
-    background-color: $light-60;
+    // background-color: $light-60;
     box-shadow: $shadow-60;
 
     @include media("<=phone") {
