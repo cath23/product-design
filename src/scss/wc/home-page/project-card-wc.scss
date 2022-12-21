@@ -26,7 +26,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border-radius: $border-radius;
+			border-radius: $border-radius-l;
 			background-color: $light-20;
 			opacity: 0;
 			transition:all .3s ease;
@@ -35,7 +35,7 @@
 		::slotted(img) {
 			width: 100%;
 			vertical-align: bottom;
-			border-radius: $border-radius;
+			border-radius: $border-radius-l;
 			transition: .3s ease;
 		}
 	}

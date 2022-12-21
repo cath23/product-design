@@ -43,6 +43,12 @@
 	}
 
 	::slotted(img) {
-		border-radius: $border-radius;
+		border-radius: $border-radius-m;
+	}
+
+	::slotted(video) {
+		border-radius: $border-radius-m;
+		box-shadow: $shadow-60;
+		clip-path: inset(1px 1px);
 	}
 }
