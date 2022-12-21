@@ -10,12 +10,12 @@ const cardTemplate = document.createElement('template');
 // The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 cardTemplate.innerHTML = /*html*/`
     <div class="quote-container">
-        <p class="quote-text bd-text-small italic"><slot name="quote-text">"This is a quoted text"</slot></p>
-        <p class="quote-caption quote-caption-text"><slot name="quote-caption"> - name </slot></p>
+        <p part="text" class="quote-text bd-text-small italic"><slot name="quote-text">"This is a quoted text"</slot></p>
+        <p part="caption" class="quote-caption quote-caption-text"><slot name="quote-caption"> - name </slot></p>
     </div>
     <div class="list-container">
-        <h3 class="list-title bold"><span class="emoji" role="img" aria-label="emoji pointer">👉&nbsp</span><slot name="list-title"></slot></h3>
-        <ul class="list bd-text-small"><slot> Insert: a li a number elements with slot="list-item"</slot></ul>
+        <h3 part="title" class="list-title bold"><span class="emoji" role="img" aria-label="emoji pointer">👉&nbsp</span><slot name="list-title"></slot></h3>
+        <ul part="text" class="list bd-text-small"><slot> Insert: a li a number elements with slot="list-item"</slot></ul>
     </div>
     `;
 

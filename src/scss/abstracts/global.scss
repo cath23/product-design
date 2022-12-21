@@ -232,7 +232,7 @@ a {
 }
 
 // ..:: Theme ::..
-@mixin theme($main, $subtitle, $bold) {
+@mixin theme($main, $soft, $strong) {
     h1, h2, h3, p, .bd-text-regular, ol, ul, .bd-text-small, .caption-text {
         color: $main;
     }
@@ -242,11 +242,28 @@ a {
     }
 
     header-section-wc::part(subtitle) {
-        color: $subtitle;
+        color: $soft;
     }
 
     .bold {
-        color: $bold;
+        color: $strong;
+    }
+
+    card-wc::part(text) {
+        color: $main;
+    }
+
+    card-wc {
+        background-color: $light-10;
+        border-radius: $border-radius;
+    }
+
+    card-wc::part(title) {
+        color: $main;
+    }
+
+    card-wc::part(caption) {
+        color: $light-40;
     }
 }
 
@@ -265,6 +282,7 @@ a {
 
 .bg-dark {
     background-color: $bg-dark;
+
     @include theme($light-90, $light-80, $light-100);
 
 }
