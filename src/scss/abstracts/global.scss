@@ -249,11 +249,6 @@ a {
         color: $strong;
     }
 
-    card-wc {
-        background-color: $light-10;
-        border-radius: $border-radius;
-    }
-
     card-wc::part(text) {
         color: $main;
     }
@@ -273,36 +268,26 @@ a {
 .bg-light {
     background-color: $bg-light;
     @include theme($dark-80, $dark-40, $dark-100);
+    card-wc {
+        background-color: $light-60;
+    }
 }
 
 .bg-grey {
     background-color: $bg-grey;
     @include theme($dark-80, $dark-40, $dark-100);
+    card-wc {
+        background-color: $light-60;
+    }
 }
 
 .bg-dark {
     background-color: $bg-dark;
-
     @include theme($light-90, $light-80, $light-100);
-
+    card-wc {
+        background-color: $light-10;
+    }
 }
-
-// header-section-wc::part(title) {
-//         color: mediumpurple !important;
-//     }
-
-// *::part(title) {
-// 	border: 5px solid red;
-//     background-color: greenyellow;
-// }
-
-
-// #green {
-//     * {
-//         color: mediumseagreen;
-//     }
-
-// }
 
 @mixin button-animation {
     &.light {
