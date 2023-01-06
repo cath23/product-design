@@ -181,7 +181,6 @@ a {
     font-weight: $fw-semiBold;
     line-height: $lh-2xl;
     letter-spacing: $ls-s;
-    color: $dark-40;
 }
 
 .container-lg {
@@ -211,10 +210,6 @@ a {
     color: $dark-80;
 }
 
-.dark-60 {
-    color: $dark-60;
-}
-
 .dark {
     color: $dark-80;
 }
@@ -231,8 +226,10 @@ a {
     font-style: italic;
 }
 
+
+//todo tidy up mixin, consolidate card styling
 // ..:: Theme ::..
-@mixin theme($main, $soft, $strong) {
+@mixin theme($main, $soft, $strong, $quote-caption) {
     h1, h2, h3, p, .bd-text-regular, ol, ul, .bd-text-small, .caption-text {
         color: $main;
     }
@@ -258,16 +255,16 @@ a {
     }
 
     card-wc::part(caption) {
-        color: $light-40;
+        color: $quote-caption;
     }
 }
 
-@include theme($dark-80, $dark-40, $dark-100);
+@include theme($dark-80, $dark-40, $dark-100, $dark-40);
 
 
 .bg-light {
     background-color: $bg-light;
-    @include theme($dark-80, $dark-40, $dark-100);
+    @include theme($dark-80, $dark-40, $dark-80, $dark-40);
     card-wc {
         background-color: $light-60;
     }
@@ -275,7 +272,7 @@ a {
 
 .bg-grey {
     background-color: $bg-grey;
-    @include theme($dark-80, $dark-40, $dark-100);
+    @include theme($dark-80, $dark-40, $dark-80, $dark-40);
     card-wc {
         background-color: $light-60;
     }
@@ -283,7 +280,7 @@ a {
 
 .bg-dark {
     background-color: $bg-dark;
-    @include theme($light-90, $light-80, $light-100);
+    @include theme($light-90, $light-80, $light-90, $light-40);
     card-wc {
         background-color: $light-10;
     }
@@ -327,7 +324,6 @@ a {
         .button__text {
             &::after {
                 width: 100%;
-                background-color: inherit;
             }
         }
 
@@ -347,6 +343,7 @@ a {
     align-items: center;
     gap: $space-3xs;
     height: 40px;
+    padding: 0;
     color: $dark-80;
     background: none;
     border: none;
