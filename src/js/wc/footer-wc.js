@@ -16,9 +16,7 @@ footerTemplate.innerHTML = /*html*/`
 			<div class="main-variant">
 				<div class="footer-container container-sm">
 					<div class="footer__title-container">
-						<div class="btn-row">
-							<h2 class="footer__title"></h2>
-						</div>
+						<h2 class="footer__title"></h2>
 						<p class="footer__subtitle">asdasd</p>
 					</div>
 					<p href="" class="footer__email">kelepourikaterina@gmail.com</p>
@@ -39,7 +37,7 @@ footerTemplate.innerHTML = /*html*/`
 			<div class="project-variant">
 				<div class="footer-container container-sm">
 					<div class="footer-content">
-						<p class="footer-content__tag tag-text">something</p>
+						<h4 class="footer-content__tag">something</h4>
 						<h2 class="footer-content__title project-title">
 							<a class="title__link"><span class="link__text">asdasd</span></a>
 						</h2>
@@ -69,16 +67,6 @@ export default class Footer extends HTMLElement {
 		// https://stackoverflow.com/q/69054340/7889584
 		//todo you don't need footer-component & header-component multiple times in the same page.
 		this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
-
-		// const img = this.getAttribute('img');
-		// console.log('img: ',img);
-		// this.url = `../../assets/projects/${img}`;
-		// console.log(this.url);
-		// const first = 'firstam.jpg';
-		// const fullUrl = `../../assets/projects/${first}`;
-		// this.imgUrl = require(fullUrl);
-		// console.log(this.imgUrl);
-
 	}
 
 	connectedCallback() {
@@ -86,7 +74,7 @@ export default class Footer extends HTMLElement {
 		if (this.getAttribute('variant') === 'main') {
 			// for the main page variant
 			const title =  this.shadowRoot.querySelector('.main-variant .footer__title');
-			title.innerText = this.getAttribute('title');
+			title.innerText = this.getAttribute('footer-title');
 
 			// const link =  this.shadowRoot.querySelector('.footer_title-link');
 			// link.href = this.getAttribute('link');

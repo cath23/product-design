@@ -9,25 +9,13 @@
 .header {
 	max-width: 450px;
 	margin: 0 auto;
-	.header__subtitle{
-		margin: 0 auto;
-		margin-bottom: $space-2xs;
-		width: fit-content;
+	text-align: center;
 
-		@include media("<=phone") {
-			margin-inline: 0;
-		}
+	@include media("<=phone") {
+		text-align: left;
 	}
 
-	.header__title {
-		margin: 0 auto;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		text-align: center;
-
-		@include media("<=phone") {
-			margin-inline: 0;
-		}
+	.header__subtitle{
+		margin-bottom: $space-2xs;
 	}
 }

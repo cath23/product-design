@@ -14,7 +14,7 @@ const projectCardTemplate = document.createElement('template');
 // The /*html*/ comment is used by an extention to be able to highlight HTML inside backticks.
 let projectPageUrl;
 projectCardTemplate.innerHTML = /*html*/`
-	<div class="pj-card">
+<div class="pj-card">
 	<a href=${projectPageUrl}>
 		<div class="pj-card__img-container">
 			<slot name='image'></slot>
@@ -31,9 +31,9 @@ projectCardTemplate.innerHTML = /*html*/`
 			</button>
 		</div>
 		<h3 class="pj-card__title"><slot name="title">Project Title</slot></h3>
-		<p class="pj-card__text bd-text-small dark-60"><slot name="desc">Description of project</slot></p>
-		</a>
-	</div>
+		<p class="pj-card__text bd-text-small "><slot name="desc">Description of project</slot></p>
+	</a>
+</div>
     `;
 
 // todo how to pass an asset url to an img tag's src atttr defined in a web component?
