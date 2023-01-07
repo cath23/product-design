@@ -28,6 +28,23 @@
 	}
 }
 
+section-wc {
+	& >* {
+		margin-bottom: $space-m;
+	 }
+
+	& > *:last-child {
+		margin-bottom: 0px;
+		& > *:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	h3.bold {
+		margin-bottom: $space-xs;
+	}
+}
+
 card-container {
 	margin-block: $space-xl;
 
@@ -59,22 +76,5 @@ image-container-wc {
 		@include media("<=phone") {
 			margin-bottom: $space-m;
 		}
-	}
-}
-
-section-wc {
-	& >* {
-		margin-bottom: $space-m;
-	 }
-
-	& > *:last-child {
-		margin-bottom: 0px;
-		& > *:last-child {
-			margin-bottom: 0px;
-		}
-	}
-
-	h3.bold {
-		margin-bottom: $space-xs;
 	}
 }
