@@ -27,6 +27,23 @@
 	}
 }
 
+section-wc {
+	& >* {
+		margin-bottom: $space-m;
+	 }
+
+	& > *:last-child {
+		margin-bottom: 0px;
+		& > *:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	h3.bold {
+		margin-bottom: $space-xs;
+	}
+}
+
 card-container {
 	margin-block: $space-xl;
 
@@ -50,22 +67,5 @@ image-container-wc {
 
     &>figure-wc:last-child {
 		margin-bottom: $space-xl;
-	}
-}
-
-section-wc {
-	& >* {
-		margin-bottom: $space-m;
-	 }
-
-	& > *:last-child {
-		margin-bottom: 0px;
-		& > *:last-child {
-			margin-bottom: 0px;
-		}
-	}
-
-	h3.bold {
-		margin-bottom: $space-xs;
 	}
 }
