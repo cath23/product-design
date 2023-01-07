@@ -30,6 +30,10 @@
 card-container {
 	margin-block: $space-xl;
 
+	@include media("<=phone") {
+		margin-block: $space-m;
+	}
+
 	card-wc {
 		border-radius: $border-radius-l;
 	}
