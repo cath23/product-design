@@ -9,7 +9,7 @@
 .card-container {
     width: 100%;
     display: grid;
-    gap: 1.5rem;
+    gap: $space-xs;
     grid-template-columns: auto;
     grid-template-rows: 1fr;
 

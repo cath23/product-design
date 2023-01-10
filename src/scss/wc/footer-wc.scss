@@ -169,7 +169,6 @@
 				@include media("<=phone") {
 					flex-direction: column;
 					justify-self: baseline;
-					// gap: $space-xs;
 					gap: 0;
 					margin-bottom: $space-m;
 				}
@@ -255,6 +254,7 @@
 			}
 
 			.footer-content__title {
+				color: $light-90;
 				display: block;
 				margin-bottom: $space-m;
 			}
