@@ -53,7 +53,11 @@ export default class ProjectCard extends HTMLElement {
 
 	connectedCallback() {
 		this.shadowRoot.querySelector('a').href = this.projectPageUrl;
-		console.log(this.shadowRoot.querySelector('a').href);
+
+		// Check if 'no-descr' attributed was paased
+		if(this.getAttribute('no-descr') === '') {
+			this.shadowRoot.querySelector('.pj-card__text').style.display = 'none';
+		}
 	}
 }
 
