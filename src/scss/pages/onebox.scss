@@ -3,7 +3,7 @@
 @use "/src/scss/abstracts/tokens.scss" as *;
 
 .pj-hero {
-	background-color: $bg-firstam;
+	background-color: $bg-onebox;
 	height: 80vh;
 	padding: $space-xl;
 	display: flex;
@@ -11,7 +11,7 @@
 
 	@include media("<=tablet") {
 		height: 70vh;
-		padding: $space-l;
+		padding: $space-xl $space-l;
 	}
 
 	@include media("<=phone") {
@@ -20,10 +20,10 @@
 	}
 .pj-hero__img {
 	display: block;
-		aspect-ratio: 19/15;
-		max-width: 100%;
-		max-height: 100%;
-		margin: 0 auto;
+	aspect-ratio: 19/13;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
 	}
 }
 

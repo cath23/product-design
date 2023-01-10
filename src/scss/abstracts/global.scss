@@ -53,7 +53,7 @@ main {
     height: inherit;
 }
 
-h1, .project-title, .footer__title, .header__title {
+h1, .footer-content__title, .footer-title, .header__title {
     font-size: $d-fs-2xl;
     font-weight: $fw-semiBold;
     line-height: $lh-m;

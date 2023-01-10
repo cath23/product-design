@@ -24,6 +24,8 @@ $bg-grey: hsl(204, 19%, 95%); // Used on surfaces on grey background - E.g. sect
 $bg-dark: hsl(240, 58%, 4%, 1); // Used on suraces on dark background - E.g. sections in case studies *** Same as Dark/100%
 
 $bg-firstam: hsla(198, 61%, 51%, 1);
+$bg-onebox: hsla(6, 100%, 77%, 1);
+;
 
 // ..:: Typography ::..
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");

@@ -1,12 +1,14 @@
 import footerStyles from 'bundle-text:../../scss/wc/footer-wc.scss';
-// import caseStudy1 from '../../case-study_1.html';
+// import caseStudy1 from '../../pages/projects/onebox.html';
 // import foo from 'src/assets/projects/*.jpg';
 //todo Globs are not supported yet in Parcel v2.
 // Find a way on how to import assets from HTML when consuming a component
-// that will resolve to the dist/hased  bundled name of the asset on render.
+// that will resolve to the dist/hashed  bundled name of the asset on render.
 // This will make the consumption of the component more dynamic without the need of slot.
 // https://github.com/parcel-bundler/parcel/issues/4683
-// There was an attempt but to add glob support on v2 but got ommited :( : https://github.com/parcel-bundler/parcel/pull/5933
+// There was an attempt to add glob support on v2 but got ommited :( : https://github.com/parcel-bundler/parcel/pull/5933
+// Resolution: Ended up having a slot. The consumer will provide an img tag with its source attr (with url relative to consumer's document location)
+
 
 const footerTemplate = document.createElement('template');
 
@@ -17,7 +19,7 @@ footerTemplate.innerHTML = /*html*/`
 				<div class="footer-container container-sm">
 					<div class="footer__title-container">
 						<h2 class="footer__title"></h2>
-						<p class="footer__subtitle">asdasd</p>
+						<p class="footer__subtitle">footer subtitle</p>
 					</div>
 					<p href="" class="footer__email">kelepourikaterina@gmail.com</p>
 					<ul class="footer__social-list">
@@ -37,10 +39,8 @@ footerTemplate.innerHTML = /*html*/`
 			<div class="project-variant">
 				<div class="footer-container container-sm">
 					<div class="footer-content">
-						<h4 class="footer-content__tag">something</h4>
-						<h2 class="footer-content__title project-title">
-							<a class="title__link"><span class="link__text">asdasd</span></a>
-						</h2>
+						<h4 class="footer-content__tag">footer tag</h4>
+						<h2 class="footer-content__title"></h2>
 						<button class=" footer-content__button button link-text light">
 							<span class="button__text">button text</span>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line class="button__arrow-tail" x1="5" y1="12" x2="19" y2="12"></line><polyline class="button__arrow-head" points="12 5 19 12 12 19"></polyline></svg>
@@ -65,7 +65,6 @@ export default class Footer extends HTMLElement {
 
 		// Using 'cloneNode(true)' enable to re-use the component multiple times in page.
 		// https://stackoverflow.com/q/69054340/7889584
-		//todo you don't need footer-component & header-component multiple times in the same page.
 		this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
 	}
 
@@ -76,9 +75,6 @@ export default class Footer extends HTMLElement {
 			const title =  this.shadowRoot.querySelector('.main-variant .footer__title');
 			title.innerText = this.getAttribute('footer-title');
 
-			// const link =  this.shadowRoot.querySelector('.footer_title-link');
-			// link.href = this.getAttribute('link');
-
 			const subtitle = this.shadowRoot.querySelector('.footer__subtitle');
 			subtitle.innerHTML = this.getAttribute('subtitle');
 
@@ -86,8 +82,8 @@ export default class Footer extends HTMLElement {
 			console.log(this.getAttribute('subtitle'));
 
 		} else if (this.getAttribute('variant') === 'project') {
-			const titleLink =  this.shadowRoot.querySelector('.project-variant .title__link');
-			titleLink.innerText = this.getAttribute('title');
+			const titleLink =  this.shadowRoot.querySelector('.project-variant .footer-content__title');
+			titleLink.textContent = this.getAttribute('footer-title');
 
 			// for the project page variant
 			const tag = this.shadowRoot.querySelector('.footer-content__tag');
@@ -102,9 +98,11 @@ export default class Footer extends HTMLElement {
 			throw new Error('No variant passed in component');
 		}
 
-		this.addEventListener('click', () => {
-			window.location.href = caseStudy1;
-		});
+		if (this.getAttribute('variant') === 'project') {
+			this.addEventListener('click', () => {
+				window.location.href = this.getAttribute('next-project-url');
+			});
+		}
 	}
 }
 
