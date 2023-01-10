@@ -31,15 +31,42 @@
     }
     project-card-wc {
         margin-bottom: $space-xl;
-        &:last-child {
-            margin-bottom: $space-3xl;
-        }
+        // &:last-child {
+        //     margin-bottom: $space-xl;
+        // }
 
         @include media('<=phone') {
             margin-bottom: $space-m;
-            &:last-child {
-                margin-bottom: $space-2xl;
-            }
+            // &:last-child {
+            //     margin-bottom: $space-m;
+            // }
         }
+    }
+}
+
+.more-projects-section {
+    margin-bottom: $space-3xl;
+    @include media("<=phone") {
+        margin-bottom: $space-2xl;
+    }
+    .more-projects-section__title {
+        margin-bottom: $space-m;
+
+        @include media("<=phone") {
+            margin-bottom: $space-s;
+        }
+    }
+    .more-projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: $space-xs;
+
+
+        @include media("<=phone") {
+            grid-template-columns: 1fr;
+            row-gap: $space-m;
+        }
+
     }
 }

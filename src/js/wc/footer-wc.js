@@ -78,9 +78,6 @@ export default class Footer extends HTMLElement {
 			const subtitle = this.shadowRoot.querySelector('.footer__subtitle');
 			subtitle.innerHTML = this.getAttribute('subtitle');
 
-			console.log(subtitle.innerText);
-			console.log(this.getAttribute('subtitle'));
-
 		} else if (this.getAttribute('variant') === 'project') {
 			const titleLink =  this.shadowRoot.querySelector('.project-variant .footer-content__title');
 			titleLink.textContent = this.getAttribute('footer-title');
