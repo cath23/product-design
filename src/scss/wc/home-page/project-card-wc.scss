@@ -12,40 +12,23 @@
 	.pj-card__img-container {
 		position: relative;
 		margin-bottom: $space-xs;
+		transition:all .3s ease;
 
 		@include media("<=phone") {
 			margin-bottom: $space-2xs;
-		}
-
-		&::after {
-			position: absolute;
-			content: "";
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: $border-radius-l;
-			background-color: $light-20;
-			opacity: 0;
-			transition:all .3s ease;
 		}
 
 		::slotted(img) {
 			width: 100%;
 			vertical-align: bottom;
 			border-radius: $border-radius-l;
-			transition: .3s ease;
 		}
 	}
 
 	&:hover {
 		cursor: pointer;
 		.pj-card__img-container {
-			&::after {
-				opacity: 1;
-			}
+			opacity: 0.8;
 		}
 
 		.details__button {
@@ -67,32 +50,23 @@
 
 	.pj-card__details {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		align-items: center;
+		gap: $space-2xs;
+		align-items: flex-start;
 		margin-bottom: $space-4xs;
 
-		.details__tag-list {
-			list-style-type: none;
-			display: flex;
+		@include media("<=phone") {
 			gap: $space-3xs;
-			// remove default list padding
-			padding-left: 0;
+			.details__button {
+					display: none;
+			}
 		}
 
-		@include media("<=phone") {
-			display: none;
-		}
-	}
-
-	.pj-card__title {
-		margin-bottom: $space-2xs;
-
-		@include media("<=phone") {
-			margin-bottom: $space-3xs;
+		.pj-card__text {
+			color: $dark-60;
 		}
 	}
 
-	.pj-card__text {
-		color: $dark-60;
-	}
+
 }
