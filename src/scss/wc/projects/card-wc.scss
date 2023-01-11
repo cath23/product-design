@@ -29,6 +29,7 @@
     padding: $space-m;
     border-radius: $border-radius-l;
     box-shadow: $shadow-60;
+    border: 1px solid $light-20;
 
     @include media("<=phone") {
         padding: 1.5rem;
