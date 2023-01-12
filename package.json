@@ -13,7 +13,8 @@
     "@parcel/transformer-inline-string": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
     "@parcel/validator-eslint": "^2.8.0",
-    "eslint": "^8.28.0"
+    "eslint": "^8.28.0",
+    "parcel-resolver-ignore": "^2.1.3"
   },
   "scripts": {
     "dev": "parcel src/*.js src/wc/*.js src/wc/home-page/*.js src/*.html src/pages/*.html src/pages/projects/*.html assets/**",
@@ -30,5 +31,10 @@
   "bugs": {
     "url": "https://github.com/cath23/product-design/issues"
   },
+  "parcelIgnore": [
+    "assets/projects/onebox/.+",
+    "assets/projects/firstam/.+"
+  ],
   "homepage": "https://github.com/cath23/product-design#readme"
 }
+

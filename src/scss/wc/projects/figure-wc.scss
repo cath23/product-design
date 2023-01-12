@@ -23,12 +23,22 @@
 }
 
 .figure-container {
+	position: relative;
 	.figure {
 		text-align: center;
 		display: grid;
 		gap: $space-2xs;
 		align-content: start;
 		place-items: center;
+		border-radius: $border-radius-m;
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			opacity: 0.8;
+			cursor: pointer;
+			background-color: $dark-05;
+			// background-color: mediumpurple;
+		}
 	}
 
 	.group {
@@ -45,6 +55,7 @@
 	::slotted(img) {
 		border-radius: $border-radius-m;
 	}
+
 
 	::slotted(video) {
 		border-radius: $border-radius-m;

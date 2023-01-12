@@ -47,6 +47,15 @@ export default class Figure extends HTMLElement {
 	}
 
 	connectedCallback() {
+		// const figure = this.shadowRoot.querySelector('.figure.single');
+		// const close = this.shadowRoot.querySelector('.close');
+		// const body = document.querySelector('body');
+		// figure.addEventListener('click', ()=> {
+		// 	figure.classList.toggle('expand');
+		// 	close.classList.toggle('non-visible');
+		// 	body.classList.toggle('no-scroll');
+		// 	console.log(body);
+		// });
 	}
 }
 
