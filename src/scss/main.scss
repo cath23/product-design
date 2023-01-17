@@ -2,6 +2,20 @@
 @use "./abstracts/tokens.scss" as *;
 @use "./abstracts/global.scss" as *;
 
+.hero-text {
+    position: relative;
+    .under-construction {
+        display: block;
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: 35%;
+        left: 25%;
+        z-index: -1;
+        margin: 0 auto;
+        opacity: 0.2;
+    }
+}
 
 .hide {
     visibility: none;
